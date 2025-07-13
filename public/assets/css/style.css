@@ -294,13 +294,57 @@ header {
 
 
 /*Footer*/
+/* Estilo geral para o footer, assegurando que o texto padrão seja branco */
 footer {
-  /* background-color: var(--preto-ccups); */
-  /* color: var(--cor-branca); */
-  /* text-align: center; */
-  /* padding: 1rem 0; */
+    background-color: var(--verde-escuro-ccups); /* Fundo do rodapé agora é o verde escuro */
+    color: var(--cor-branca); /* Cor do texto geral no footer (títulos e parágrafos que não são links) */
 }
 
+/* Estilo para links em todas as listas não ordenadas (ul) dentro do footer */
+/* Isso afetará "Parceiros", "Links Importantes" */
+footer .list-unstyled a {
+    color: var(--amarelo-ccups); /* Cor dos links do rodapé (ex: amarelo CCUPS) */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    transition: color 0.3s ease; /* Transição suave para o hover */
+}
+
+footer .list-unstyled a:hover {
+    color: var(--cor-branca); /* Cor do link no hover (ex: branco) */
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+}
+
+/* Estilo específico para os ÍCONES de redes sociais */
+footer .social-icons a {
+    font-size: 1.8rem; /* Tamanho dos ícones para mais destaque, ajuste se preferir */
+    color: var(--amarelo-ccups); /* Cor dos ícones de redes sociais */
+    text-decoration: none; /* Garante que não tenham sublinhado */
+    transition: color 0.3s ease; /* Transição suave para o hover */
+    margin-right: 15px; /* Espaçamento entre os ícones */
+}
+
+footer .social-icons a:last-child {
+    margin-right: 0; /* Remove a margem do último ícone */
+}
+
+footer .social-icons a:hover {
+    color: var(--cor-branca); /* Cor dos ícones no hover */
+}
+
+/* Estilo para os ÍCONES e texto nas informações de contato (telefone, email, endereço) */
+footer .list-unstyled li { /* Aplica-se aos itens da lista de contato */
+    color: var(--cor-branca); /* Cor do texto (número, email, endereço) */
+}
+
+footer .list-unstyled li i { /* Aplica-se aos ícones DENTRO da lista de contato */
+    color: var(--amarelo-ccups); /* Cor dos ícones de contato */
+    margin-right: 0.5rem; /* Adiciona um pequeno espaço entre o ícone e o texto */
+}
+
+/* Estilo para o texto do copyright */
+footer .border-top p {
+    color: rgba(255, 255, 255, 0.6) !important; /* Um branco semi-transparente para o copyright, para suavizar */
+    font-size: 0.9rem; /* Torna o texto do copyright um pouco menor */
+}
 
 
 /* =============================
