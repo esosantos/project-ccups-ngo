@@ -17,7 +17,7 @@
   --vermelho-ccups:   #F44336;
   --verde-limao-ccups:#CDDC39;
   --verde-ccups:      #4CAF50;
-  --verde-escuro--ccups: #255655;  
+  --verde-escuro-ccups: #255655;  
   --preto-ccups:      #000000;
   --cinza-ccups: #f1f3ef;
   --gold-ccups: #d4ac44;
@@ -27,6 +27,32 @@
   --cor-texto:        #222;
   --cor-branca:       #ffffff;
   --cor-cinza-claro:  #eeeeee;
+  /*Cores para o LOGO*/
+    --cor-letra-c1: var(--verde-ccups); /* Verde para o primeiro C */
+  --cor-letra-c2: var(--azul-ccups); /* Azul para o segundo C */
+  --cor-letra-u: var(--amarelo-ccups); /* Amarelo para o U */
+  --cor-letra-p: var(--laranja-ccups); /* Laranja para o P */
+  --cor-letra-s: var(--vermelho-ccups); /* Vermelho para o S */
+
+  /* =============================
+   TIPOGRAFIA
+   ============================= */
+     /* Tamanhos */
+  --fs-base: 16px;
+  --fs-pequeno: 14px;
+  --fs-grande: 18px;
+  --fs-h1: 2.5rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.75rem;
+  --fs-h4: 1.5rem;
+  --fs-h5: 1.25rem;
+  --fs-h6: 1rem;
+
+  /* Pesos */
+  --fw-normal: 400;
+  --fw-link:500;
+  --fw-semi: 600;
+  --fw-bold: 700;
 }
 
 
@@ -49,6 +75,7 @@
 /* =============================
    TIPOGRAFIA
    ============================= */
+   
 
 body {
   /* font-family: 'Poppins', sans-serif; */
@@ -68,7 +95,35 @@ p {
 }
 
 
+/* =============================
+   RESET BÁSICO
+   ============================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura do elemento */
+}
+html {
+    scroll-behavior: smooth; /* Para rolagem suave em links âncora */
+}
+body {
+    -webkit-font-smoothing: antialiased; /* Suaviza a fonte no Chrome/Safari */
+    -moz-osx-font-smoothing: grayscale; /* Suaviza a fonte no Firefox */
+    font-family: 'Poppins', sans-serif; /* Exemplo de fonte, descomente se usar */
+    font-size: 16px;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+html, body {
+    min-height: 100vh; /* Garante que a altura mínima da viewport seja coberta */
+    display: flex;
+    flex-direction: column; /* Para usar flexbox e empurrar o rodapé para baixo */
+}
 
+/* O main precisa crescer para empurrar o footer */
+main {
+    flex-grow: 1;
+}
 /* =============================
    BOTÕES
    ============================= */
@@ -86,6 +141,36 @@ p {
   /* background-color: var(--laranja-ccups); */
 }
 
+/*Configuração do Botão Contato*/
+.btn-contact {
+  background-color: var(--verde-escuro-ccups);
+  color: var(--cor-branca);
+  padding: 8px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* sombra suave */
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-contact:hover {
+  background-color: var(--verde-ccups);
+  transform: scale(1.06); /* leve crescimento */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+/*Configuração do Botão de fechar menu responsivo*/
+.nav-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+.nav-toggler:focus, .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
 
 /* =============================
    LAYOUT
@@ -102,6 +187,52 @@ header {
   /* padding: 2rem 0; */
   /* text-align: center; */
 }
+.navbar-brand {
+    padding: 0.5rem 0;
+    margin-right: 0;
+    display: flex; /* ATIVADO O FLEXBOX para alinhar imagem e texto lado a lado */
+    align-items: center; /* Centraliza verticalmente a imagem e o texto */
+    color: var(--cor-branca); /* Cor do texto "CCUPS" */
+    font-size: 1.8rem; /* Ajuste o tamanho da fonte do CCUPS aqui se for diferente de fs-4 */
+}
+
+/* Classe para a imagem da logo dentro do cabeçalho */
+.logo-header {
+    max-height: 40px !important; /* Tamanho pequeno para desktop. Tente 35px, 30px se ainda for grande. */
+    height: auto !important;
+    width: auto !important;
+    max-width: 100% !important;
+    display: block !important;
+    object-fit: contain !important;
+    /* Remover margin-right se o ms-2 no HTML já for suficiente */
+}
+/*Configuração do Menu*/
+.nav-link{
+    color: var(--verde-escuro-ccups);
+    font-weight: var(--fw-link);
+    position: relative;
+}
+.nav-link:hover, .nav-link.active{
+    color: var(--verde-ccups);
+}
+.nav-link::before{
+    content: "";
+    position:absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--verde-escuro-ccups);
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+.nav-link:hover::before, .nav-link.active::before{
+    width: 100%;
+    visibility: visible;
+}
+
+
 
 footer {
   /* background-color: var(--preto-ccups); */
@@ -113,34 +244,126 @@ footer {
 
 
 /* =============================
-   📱 RESPONSIVO
+   RESPONSIVO
+   ============================= */
+
+/* Estilo base (funciona em todas as telas) */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--verde-escuro-ccups);
+  visibility: hidden;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Hover e ativo (inicialmente com traço pequeno) */
+.nav-link:hover::before,
+.nav-link.active::before {
+  width: 40%;   /* largura padrão em telas menores */
+  visibility: visible;
+}
+
+/* =============================
+   RESPONSIVIDADE
+   ============================= */
+
+/* Estilo base (funciona em todas as telas) */
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--verde-escuro-ccups);
+  visibility: hidden;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Hover e ativo (inicialmente com traço pequeno) */
+.nav-link:hover::before,
+.nav-link.active::before {
+  width: 40%;   /* largura padrão em telas menores */
+  visibility: visible;
+}
+
+/* =============================
+   RESPONSIVIDADE
    ============================= */
 
 /* Telas pequenas (smartphones) */
-@media (max-width: 576px) {
-  header {
-    /* font-size: 1.2rem; */
-  }
+/* =============== ESTILO BASE =============== */
 
-  h1 {
-    /* font-size: 1.5rem; */
-  }
-
-  section {
-    /* padding: 2rem 1rem; */
-  }
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
 }
 
-/* Telas médias (tablets) */
-@media (min-width: 577px) and (max-width: 992px) {
-  header {
-    /* padding: 2rem; */
-  }
+
+/* Traço padrão (invisível no início) */
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--verde-escuro-ccups);
+  visibility: hidden;
+  transition: width 0.3s ease-in-out;
 }
 
-/* Telas grandes (desktops) */
+/* Aumenta levemente o texto ao passar o mouse */
+.nav-link:hover {
+  transform: scale(1.05);
+}
+
+/* Texto ativo (destacado) */
+.nav-link.active {
+  color: var(--verde-ccups); /* cor diferente para ativo */
+}
+
+
+/* =============== TELAS GRANDES (DESKTOP) =============== */
+
 @media (min-width: 993px) {
-  header {
-    /* padding: 3rem; */
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
   }
 }
+
+/* =============== TELAS MENORES (CELULAR/TABLET) =============== */
+
+@media (max-width: 992px) {
+  .nav-link::before {
+    display: none; /* oculta totalmente o traço */
+  }
+
+  .nav-link:hover {
+    transform: scale(1.1); /* texto cresce levemente */
+  }
+
+  .nav-link.active {
+    color: var(--verde-ccups);
+  }
+}
+
