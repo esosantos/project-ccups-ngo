@@ -235,8 +235,9 @@ header {
 }
 
 /* Seção Home*/
-#home{
- background: linear-gradient(135deg, var(--verde-escuro-ccups), var(--verde-escuro-ccups));
+#home {
+    /* Mantém o gradiente verde escuro como base FORTE */
+    background: linear-gradient(135deg, var(--verde-escuro-ccups), var(--verde-escuro-ccups));
 }
 .title-ccups{
   color: var(--cor-branca);
