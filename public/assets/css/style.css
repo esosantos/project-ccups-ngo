@@ -1,0 +1,146 @@
+/* =============================
+   CSS Principal - CCUPS
+   Estrutura Inicial + Cores da Logo
+   ============================= */
+
+
+/* =============================
+   CORES
+   ============================= */
+
+/* Paleta baseada na logo */
+:root {
+  --azul-ccups:       #2196F3;
+  --amarelo-ccups:    #FFEB3B;
+  --laranja-ccups:    #FF9800;
+  --marrom-ccups:     #795548;
+  --vermelho-ccups:   #F44336;
+  --verde-limao-ccups:#CDDC39;
+  --verde-ccups:      #4CAF50;
+  --verde-escuro--ccups: #255655;  
+  --preto-ccups:      #000000;
+  --cinza-ccups: #f1f3ef;
+  --gold-ccups: #d4ac44;
+
+  /* Cores auxiliares */
+  --cor-fundo:        #f9f9f9;
+  --cor-texto:        #222;
+  --cor-branca:       #ffffff;
+  --cor-cinza-claro:  #eeeeee;
+}
+
+
+/* Classes utilitárias opcionais */
+.bg-azul      { background-color: var(--azul-ccups); }
+.bg-verde     { background-color: var(--verde-ccups); }
+.bg-laranja   { background-color: var(--laranja-ccups); }
+.bg-vermelho  { background-color: var(--vermelho-ccups); }
+.bg-marrom    { background-color: var(--marrom-ccups); }
+.bg-preto     { background-color: var(--preto-ccups); }
+
+.text-azul      { color: var(--azul-ccups); }
+.text-verde     { color: var(--verde-ccups); }
+.text-laranja   { color: var(--laranja-ccups); }
+.text-vermelho  { color: var(--vermelho-ccups); }
+.text-marrom    { color: var(--marrom-ccups); }
+.text-preto     { color: var(--preto-ccups); }
+
+
+/* =============================
+   TIPOGRAFIA
+   ============================= */
+
+body {
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-size: 16px; */
+  /* color: var(--cor-texto); */
+  /* background-color: var(--cor-fundo); */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* font-weight: bold; */
+  /* margin-bottom: 1rem; */
+}
+
+p {
+  /* line-height: 1.6; */
+  /* margin-bottom: 1rem; */
+}
+
+
+
+/* =============================
+   BOTÕES
+   ============================= */
+
+.btn-custom {
+  /* background-color: var(--verde-ccups); */
+  /* color: var(--cor-branca); */
+  /* padding: 10px 20px; */
+  /* border: none; */
+  /* border-radius: 5px; */
+  /* transition: background-color 0.3s ease; */
+}
+
+.btn-custom:hover {
+  /* background-color: var(--laranja-ccups); */
+}
+
+
+/* =============================
+   LAYOUT
+   ============================= */
+
+.container {
+  /* padding-left: 15px; */
+  /* padding-right: 15px; */
+}
+
+header {
+  /* background-color: var(--verde-ccups); */
+  /* color: var(--cor-branca); */
+  /* padding: 2rem 0; */
+  /* text-align: center; */
+}
+
+footer {
+  /* background-color: var(--preto-ccups); */
+  /* color: var(--cor-branca); */
+  /* text-align: center; */
+  /* padding: 1rem 0; */
+}
+
+
+
+/* =============================
+   📱 RESPONSIVO
+   ============================= */
+
+/* Telas pequenas (smartphones) */
+@media (max-width: 576px) {
+  header {
+    /* font-size: 1.2rem; */
+  }
+
+  h1 {
+    /* font-size: 1.5rem; */
+  }
+
+  section {
+    /* padding: 2rem 1rem; */
+  }
+}
+
+/* Telas médias (tablets) */
+@media (min-width: 577px) and (max-width: 992px) {
+  header {
+    /* padding: 2rem; */
+  }
+}
+
+/* Telas grandes (desktops) */
+@media (min-width: 993px) {
+  header {
+    /* padding: 3rem; */
+  }
+}
