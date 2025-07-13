@@ -27,12 +27,7 @@
   --cor-texto:        #222;
   --cor-branca:       #ffffff;
   --cor-cinza-claro:  #eeeeee;
-  /*Cores para o LOGO*/
-    --cor-letra-c1: var(--verde-ccups); /* Verde para o primeiro C */
-  --cor-letra-c2: var(--azul-ccups); /* Azul para o segundo C */
-  --cor-letra-u: var(--amarelo-ccups); /* Amarelo para o U */
-  --cor-letra-p: var(--laranja-ccups); /* Laranja para o P */
-  --cor-letra-s: var(--vermelho-ccups); /* Vermelho para o S */
+
 
   /* =============================
    TIPOGRAFIA
@@ -120,6 +115,13 @@ html, body {
     flex-direction: column; /* Para usar flexbox e empurrar o rodapé para baixo */
 }
 
+
+/* --- Para Firefox (mais limitado) --- */
+body {
+    scrollbar-color: var(--verde-ccups) var(--cor-fundo); /* thumb color track color */
+    scrollbar-width: thin; /* 'auto', 'thin', or 'none' */
+}
+
 /* O main precisa crescer para empurrar o footer */
 main {
     flex-grow: 1;
@@ -193,12 +195,12 @@ header {
     display: flex; /* ATIVADO O FLEXBOX para alinhar imagem e texto lado a lado */
     align-items: center; /* Centraliza verticalmente a imagem e o texto */
     color: var(--cor-branca); /* Cor do texto "CCUPS" */
-    font-size: 1.8rem; /* Ajuste o tamanho da fonte do CCUPS aqui se for diferente de fs-4 */
+    font-size: 1.rem; /* Ajuste o tamanho da fonte do CCUPS aqui se for diferente de fs-4 */
 }
 
 /* Classe para a imagem da logo dentro do cabeçalho */
 .logo-header {
-    max-height: 40px !important; /* Tamanho pequeno para desktop. Tente 35px, 30px se ainda for grande. */
+    max-height: 70px !important; /* Tamanho pequeno para desktop. Tente 35px, 30px se ainda for grande. */
     height: auto !important;
     width: auto !important;
     max-width: 100% !important;
@@ -232,8 +234,65 @@ header {
     visibility: visible;
 }
 
+/* Seção Home*/
+#home{
+ background: linear-gradient(135deg, var(--verde-escuro-ccups), var(--verde-escuro-ccups));
+}
+.title-ccups{
+  color: var(--cor-branca);
+}
+.ccups-c1 {
+  color: var(--amarelo-ccups);
+}
+
+.ccups-c2 {
+  color: var(--cor-branca); 
+}
+
+.ccups-c3 {
+  color: var(--vermelho-ccups); 
+}
+
+.ccups-c4 {
+  color: var(--verde-ccups); 
+}
+
+.ccups-c5 {
+  color: #6f42c1; /* Roxo Bootstrap */
+}
+
+.sub-title{
+  color: var(--cinza-ccups);
+  font-size: var(--fs-grande);
+}
+.btn-more{
+  background-color: var(--cor-branca);
+  color: var(--verde-escuro-ccups);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* sombra suave */
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+}
+
+.btn-more:hover {
+  background-color: var(--verde-ccups);
+  color:var(--cor-branca);
+  transform: scale(1.06); /* leve crescimento */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
 
+
+
+
+/*Footer*/
 footer {
   /* background-color: var(--preto-ccups); */
   /* color: var(--cor-branca); */
