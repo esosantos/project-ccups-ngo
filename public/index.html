@@ -297,22 +297,25 @@
     <!-- Título -->
     <div class="row justify-content-center mb-5">
       <div class="col-lg-8 text-center">
-        <h2 class="display-5 fw-bold text-primary mb-3">Nossos Cursos e Oficinas</h2>
+        <h2 class="display-5 fw-bold ccups-c4 mb-3">Nossos Cursos e Oficinas</h2>
         <div class="border-bottom border-3 border-warning mx-auto" style="width: 80px;"></div>
-        <p class="mt-3">Oferecemos diversas atividades educativas, culturais e esportivas para crianças e adolescentes de 4 a 17 anos.</p>
+        <p class="mt-3 sub-title">Oferecemos diversas atividades educativas, culturais e esportivas para crianças e adolescentes de 4 a 17 anos.</p>
       </div>
     </div>
 
-    <!-- Cards de Cursos -->
+    <!-- Cards -->
     <div class="row g-4">
+      <!-- Curso -->
+      <!-- Reutilizável para todos -->
+      <!-- CARD -->
       <!-- Capoeira -->
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 border-0 shadow-sm">
-          <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Oficina de Capoeira">
+          <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?auto=format&fit=crop&w=512&h=512&q=80" class="card-img-top" alt="Capoeira">
           <div class="card-body">
             <h3 class="card-title fw-bold">Capoeira</h3>
-            <p class="card-text">Arte marcial e cultura para jovens de 5 a 17 anos.</p>
-            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalCapoeira">Saiba Mais</button>
+            <p class="card-text">Arte marcial e afro-brasileira.</p>
+            <button class="btn btn-more mt-auto" data-bs-toggle="modal" data-bs-target="#modalCapoeira">Saiba Mais</button>
           </div>
         </div>
       </div>
@@ -320,11 +323,11 @@
       <!-- Ballet -->
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 border-0 shadow-sm">
-          <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Oficina de Ballet">
+          <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=512&h=512&q=80" class="card-img-top" alt="Ballet">
           <div class="card-body">
             <h3 class="card-title fw-bold">Ballet</h3>
-            <p class="card-text">Dança clássica e disciplina para meninas de 4 a 12 anos.</p>
-            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalBallet">Saiba Mais</button>
+            <p class="card-text">Dança clássica e disciplina.</p>
+            <button class="btn btn-more mt-auto" data-bs-toggle="modal" data-bs-target="#modalBallet">Saiba Mais</button>
           </div>
         </div>
       </div>
@@ -332,67 +335,150 @@
       <!-- Boxe -->
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 border-0 shadow-sm">
-          <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Oficina de Boxe">
+          <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=512&h=512&q=80" class="card-img-top" alt="Boxe">
           <div class="card-body">
             <h3 class="card-title fw-bold">Boxe</h3>
-            <p class="card-text">Autocontrole, força e disciplina para jovens de 6 a 17 anos.</p>
-            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalBoxe">Saiba Mais</button>
+            <p class="card-text">Autocontrole, força e disciplina.</p>
+            <button class="btn btn-more mt-auto" data-bs-toggle="modal" data-bs-target="#modalBoxe">Saiba Mais</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Futebol -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=512&h=512&q=80" class="card-img-top" alt="Futebol">
+          <div class="card-body">
+            <h3 class="card-title fw-bold">Futebol</h3>
+            <p class="card-text">Trabalho em equipe.</p>
+            <button class="btn btn-more mt-auto" data-bs-toggle="modal" data-bs-target="#modalFutebol">Saiba Mais</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Informática -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=512&h=512&q=80" class="card-img-top" alt="Informática">
+          <div class="card-body">
+            <h3 class="card-title fw-bold">Informática.</h3>
+            <p class="card-text">Educação digital</p>
+            <button class="btn btn-more mt-auto" data-bs-toggle="modal" data-bs-target="#modalInformatica">Saiba Mais</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Empoderamento -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 d-flex flex-column border-0 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=512&h=512&q=80" class="card-img-top" alt="Empoderamento">
+          <div class="card-body">
+            <h3 class="card-title fw-bold">Empoderamento</h3>
+            <p class="card-text">Beleza, autoestima para meninas.</p>
+            <button class="btn btn-more mt-auto" data-bs-toggle="modal" data-bs-target="#modalEmpoderamento">Saiba Mais</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Modais dos Cursos -->
+    <!-- MODAIS -->
     <div class="modais">
-      <!-- Modal Capoeira -->
+      <!-- Capoeira -->
       <div class="modal fade" id="modalCapoeira" tabindex="-1" aria-labelledby="modalCapoeiraLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header bg-primary text-white">
               <h5 class="modal-title" id="modalCapoeiraLabel">Oficina de Capoeira</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-              <p>A oficina de Capoeira é uma prática que mistura esporte, cultura e musicalidade. É uma excelente atividade física e social, promovendo autoestima, coordenação motora e disciplina em jovens de 5 a 17 anos. As aulas incluem aquecimento, movimentos básicos e rodas de capoeira com instrumentos.</p>
+              <p>Arte afro-brasileira que mistura dança, luta e música. Fortalece o corpo e a autoestima das crianças, desenvolvendo respeito e trabalho em grupo.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Modal Ballet -->
+      <!-- Ballet -->
       <div class="modal fade" id="modalBallet" tabindex="-1" aria-labelledby="modalBalletLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header bg-primary text-white">
               <h5 class="modal-title" id="modalBalletLabel">Oficina de Ballet</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-              <p>Com foco na dança clássica, o Ballet oferece disciplina, postura e expressão corporal para meninas de 4 a 12 anos. As aulas são dinâmicas e respeitam o desenvolvimento físico e emocional das crianças. Também preparamos apresentações em datas comemorativas.</p>
+              <p>Dança clássica que promove disciplina, elegância e coordenação motora. Atividades lúdicas e apresentações especiais ao longo do ano.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Modal Boxe -->
+      <!-- Boxe -->
       <div class="modal fade" id="modalBoxe" tabindex="-1" aria-labelledby="modalBoxeLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header bg-primary text-white">
               <h5 class="modal-title" id="modalBoxeLabel">Oficina de Boxe</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-              <p>Voltado para crianças e adolescentes de 6 a 17 anos, o Boxe ensina respeito, foco, autocontrole e melhora a resistência física. As aulas seguem técnicas básicas do boxe recreativo e educativo, com acompanhamento de educadores especializados.</p>
+              <p>Desenvolvimento físico e emocional por meio do esporte. O Boxe educativo ajuda na concentração, respeito e alívio do estresse.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Futebol -->
+      <div class="modal fade" id="modalFutebol" tabindex="-1" aria-labelledby="modalFutebolLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+              <h5 class="modal-title" id="modalFutebolLabel">Escolinha de Futebol</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>Incentiva o espírito de equipe, o respeito às regras e a saúde. Ideal para jovens em busca de atividades físicas regulares e socialização.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Informática -->
+      <div class="modal fade" id="modalInformatica" tabindex="-1" aria-labelledby="modalInformaticaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+              <h5 class="modal-title" id="modalInformaticaLabel">Oficina de Informática</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>Ensina o uso consciente e produtivo da tecnologia. Os alunos aprendem desde digitação, uso do pacote Office até noções de segurança digital.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Empoderamento -->
+      <div class="modal fade" id="modalEmpoderamento" tabindex="-1" aria-labelledby="modalEmpoderamentoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+              <h5 class="modal-title" id="modalEmpoderamentoLabel">Oficina de Empoderamento</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>Oficinas de autoestima, beleza e cidadania para meninas. Inclui atividades práticas, rodas de conversa e orientação profissional.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
-<!---Table and List --0-->
+
+<!---Table and List-->
 
 <section id="horarios" class="py-5 bg-white">
   <div class="container">
@@ -562,7 +648,7 @@
               target="_blank">
               <i class="fab fa-instagram fa-lg"></i>
             </a>
-            <a href="https://wa.me/5571999999999" class="btn btn-outline-light btn-floating m-1 rounded-circle"
+            <a href="https://wa.me/5571981555170" class="btn btn-outline-light btn-floating m-1 rounded-circle"
               aria-label="WhatsApp" target="_blank">
               <i class="bi bi-whatsapp fa-lg"></i>
             </a>
@@ -586,8 +672,6 @@
             <li class="mb-2"><a href="#doe-agora" class="text-white text-decoration-none hover-primary">Doe Agora</a>
             </li>
             <li class="mb-2"><a href="#contato" class="text-white text-decoration-none hover-primary">Contato</a></li>
-            <li><a href="privacidade.html" class="text-white text-decoration-none hover-primary">Política de
-                Privacidade</a></li>
           </ul>
         </div>
 
@@ -611,7 +695,7 @@
           <ul class="list-unstyled">
             <li class="mb-3 d-flex align-items-start">
               <i class="fas fa-phone-alt mt-1 me-2"></i>
-              <span>(71) 99999-9999</span>
+              <span>(71)8155-5170</span>
             </li>
             <li class="mb-3 d-flex align-items-start">
               <i class="fas fa-envelope mt-1 me-2"></i>
@@ -619,7 +703,7 @@
             </li>
             <li class="d-flex align-items-start">
               <i class="fas fa-map-marker-alt mt-1 me-2"></i>
-              <span>Rua Wenceslau, nº 123 - Salvador, BA</span>
+              <span>CEP:40.252-190, Rua Wenceslau, nº 13, Bairro Cosme de Farias - Salvador, BA</span>
             </li>
           </ul>
         </div>
