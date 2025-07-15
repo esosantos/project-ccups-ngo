@@ -355,13 +355,24 @@ header {
 /* Efeito hover na imagem (opcional) */
 
 
+/*Courses*/
+
+  .card-img-top {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    max-width: 512px;
+    max-height: 512px;
+    margin: 0 auto;
+  }
+
 
 /* ================================
    Footer Estilizado - CCUPS
    ================================ */
 
 .hover-primary:hover {
-  color: #ffc107 !important;
+  color: var(--azul-ccups) !important;
   transition: color 0.3s ease;
 }
 
@@ -397,7 +408,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #ffc107 !important;
+  color: var(--azul-ccups) !important;
   
 }
 
@@ -464,10 +475,6 @@ footer .border-top {
   width: 40%;   /* largura padrão em telas menores */
   visibility: visible;
 }
-
-/* =============================
-   RESPONSIVIDADE
-   ============================= */
 
 /* Telas pequenas (smartphones) */
 /* =============== ESTILO BASE =============== */
