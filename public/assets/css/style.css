@@ -189,6 +189,35 @@ header {
   /* padding: 2rem 0; */
   /* text-align: center; */
 }
+
+/*Classes de efeitos - uso geral*/
+.hover-zoom {
+  transition: transform 0.3s ease;
+}
+.hover-zoom:hover {
+  transform: scale(1.03);
+}
+
+
+  /* Efeito de crescimento suave */
+  .hover-grow {
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+  
+  .hover-grow:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    z-index: 10;
+  }
+  
+  /* Melhoria para os cards de números */
+  .card-body .col-4 .hover-grow:hover {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+  }
+
+
 .navbar-brand {
     padding: 0.5rem 0;
     margin-right: 0;
@@ -196,6 +225,13 @@ header {
     align-items: center; /* Centraliza verticalmente a imagem e o texto */
     color: var(--cor-branca); /* Cor do texto "CCUPS" */
     font-size: 1.rem; /* Ajuste o tamanho da fonte do CCUPS aqui se for diferente de fs-4 */
+}
+.logo-text {
+  font-size: clamp(1.7rem, 2vw + 0.5rem, 2.5rem); /* responsivo */
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1;
 }
 
 /* Classe para a imagem da logo dentro do cabeçalho */
@@ -236,12 +272,26 @@ header {
 
 /* Seção Home*/
 #home {
-    /* Mantém o gradiente verde escuro como base FORTE */
-    background: linear-gradient(135deg, var(--verde-escuro-ccups), var(--verde-escuro-ccups));
-}
-.title-ccups{
+  background-color: #a8d5ba	; /* verde suave escolhido */
   color: var(--cor-branca);
+  min-height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
+
+.title-ccups {
+  font-size: clamp(2rem, 4vw + 1rem, 4rem); /* responsivo entre 2rem e 4rem */
+  font-weight: var(--fw-bold);
+  color: var(--cor-branca);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
 .ccups-c1 {
   color: var(--amarelo-ccups);
 }
@@ -259,13 +309,25 @@ header {
 }
 
 .ccups-c5 {
-  color: #6f42c1; /* Roxo Bootstrap */
+  color: var(--verde-limao-ccups); /* Roxo Bootstrap */
+}
+.ccups-c6{
+  color: var(--azul-ccups);
 }
 
-.sub-title{
-  color: var(--cinza-ccups);
-  font-size: var(--fs-grande);
+.sub-title {
+  color: var(--verde-escuro-ccups); /* verde escuro para contraste */
+  font-size: clamp(1.1rem, 2vw + 0.5rem, 1.4rem);
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 1.5rem auto 0;
+  padding-top: 10px;
 }
+.text-justify {
+  text-align: justify !important;
+}
+
 .btn-more{
   background-color: var(--cor-branca);
   color: var(--verde-escuro-ccups);
@@ -289,7 +351,8 @@ header {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-
+/*About*/
+/* Efeito hover na imagem (opcional) */
 
 
 
