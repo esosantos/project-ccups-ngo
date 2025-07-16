@@ -236,14 +236,10 @@ header {
 
 /* Classe para a imagem da logo dentro do cabeçalho */
 .logo-header {
-    max-height: 70px !important; /* Tamanho pequeno para desktop. Tente 35px, 30px se ainda for grande. */
-    height: auto !important;
-    width: auto !important;
-    max-width: 100% !important;
-    display: block !important;
-    object-fit: contain !important;
-    /* Remover margin-right se o ms-2 no HTML já for suficiente */
+  height: 30px;
+  max-width: 100%;
 }
+
 /*Configuração do Menu*/
 .nav-link{
     color: var(--verde-escuro-ccups);
@@ -537,3 +533,8 @@ footer .border-top {
   }
 }
 
+@media (max-width: 767.98px) {
+  .logo-header {
+    display: none;
+  }
+}
