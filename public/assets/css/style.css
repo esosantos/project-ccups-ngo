@@ -328,13 +328,13 @@ header {
 .btn-more{
   background-color: var(--cor-branca);
   color: var(--verde-escuro-ccups);
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: 10px;
   text-decoration: none;
   border: none;
   display: inline-block;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* sombra suave */
   transition: all 0.3s ease-in-out;
   cursor: pointer;
