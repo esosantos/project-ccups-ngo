@@ -346,7 +346,23 @@ header {
   transform: scale(1.06); /* leve crescimento */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-
+.btn-danger{
+   padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* sombra suave */
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.btn-danger:hover {
+  color:var(--cor-branca);
+  transform: scale(1.06); /* leve crescimento */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 /*About*/
 /* Efeito hover na imagem (opcional) */
 
