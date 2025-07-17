@@ -166,13 +166,10 @@ body {
 
 html,
 body {
-  min-height: 100vh;
-  /* Garante que a altura mínima da viewport seja coberta */
-  display: flex;
-  flex-direction: column;
-  /* Para usar flexbox e empurrar o rodapé para baixo */
+  width: 100%;
+  overflow-x: hidden;
+  /* previne vazamento */
 }
-
 
 /* --- Para Firefox (mais limitado) --- */
 body {
@@ -381,29 +378,79 @@ header {
 
 
 /* ================================
-   Section HOME - 
-   ================================ */
-#home {
+   Section HOME 
 
-  color: var(--cor-branca);
+   */
+#home {
+  position: relative;
   min-height: 100vh;
-  padding-top: 5rem;
+  padding-top: calc(5rem + 70px);
+  /* espaço para header fixo */
   padding-bottom: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: var(--cor-branca);
+  overflow: hidden;
+  /* impede conteúdo fora da section */
 }
 
+/* Imagem centralizada como pseudo-elemento */
+#home::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(400px, 40vw, 1000px);
+  height: clamp(400px, 40vw, 1000px);
+  background: url('../img/fundo.png') no-repeat center;
+  background-size: contain;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+/* Overlay */
+#home::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 0;
+}
+
+#home .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Títulos e subtítulos */
 .title-ccups {
   font-size: clamp(2rem, 4vw + 1rem, 4rem);
-  /* responsivo entre 2rem e 4rem */
   font-weight: var(--fw-bold);
   color: var(--cor-branca);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   line-height: 1.2;
-  margin-bottom: 1rem;
 }
+
+.sub-title {
+  color: var(--cor-branca);
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.4rem);
+  max-width: 800px;
+  margin: 1.5rem auto;
+}
+
+/* Responsividade extra */
+@media (max-width: 768px) {
+  #home {
+    padding-top: 6rem;
+    /* espaço pro menu fixo */
+    background: linear-gradient(135deg, #198754 60%, #ffffff 40%);
+    /* ajusta ângulo */
+  }
+}
+
 
 .ccups-c1 {
   color: var(--amarelo-ccups);
@@ -474,6 +521,14 @@ header {
 /* ================================
    Section TEAM - 
    ================================ */
+#team {
+  background: linear-gradient(135deg, #198754 50%, var(--verde-escuro-ccups) 50%);
+  /* #198754 é o verde Bootstrap, pode ajustar */
+  color: #212529;
+  /* texto escuro para contraste */
+  padding: 5rem 0;
+}
+
 
 #team .team-card {
   border: none;
@@ -501,6 +556,7 @@ header {
 }
 
 @media (max-width: 576px) {
+
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
     padding: 0.8rem !important;
@@ -811,4 +867,3 @@ footer .border-top {
     display: none;
   }
 }
-
