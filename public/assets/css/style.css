@@ -475,139 +475,38 @@ header {
    Section TEAM - 
    ================================ */
 
-/* ===== Team Section ===== */
-#team .team-member img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border: 5px solid var(--cor-branca);
-}
-
-.carousel-inner {
-  min-height: 450px;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-size: 50%;
-  filter: invert(1);
-}
-
-/* Botão Saiba Mais */
-#team .btn-success {
-  border-radius: 30px;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-#team .btn-success:hover {
-  background-color: #157347;
-}
-
-/* Modal */
-.modal-content {
-  border-radius: 10px;
-}
-
-.modal-backdrop {
-  z-index: 1040 !important;
-  /* valor padrão */
-}
-
-.modal {
-  z-index: 1050 !important;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-
-.social-icon {
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f1f1f1;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  color: #198754;
-  transition: 0.3s;
-}
-
-.social-icon:hover {
-  background: #198754;
-  color: #fff;
-}
-
-/* Custom Carousel Controls */
-/* Botões padrão */
-.custom-control {
-  width: 60px;
-  height: 60px;
-  background: #198754;
-  /* Verde */
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.9;
-  transition: all 0.3s ease;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-
-.custom-control:hover {
-  background: #157347;
-}
-
-.custom-icon {
-  color: #fff;
-  font-size: 1.8rem;
-}
-
-/* Telas pequenas - reduz tamanho */
-@media (max-width: 576px) {
-  .custom-control {
-    width: 30px;
-    height: 30px;
-  }
-
-  .custom-icon {
-    font-size: 1.2rem;
-  }
-}
-
-
-/* Responsividade */
-/* Ajuste padrão (para mobile e tablets) */
-#team .team-member img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border: 5px solid #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+#team .team-card {
+  border: none;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
   transition: transform 0.3s ease;
 }
 
-/* Em telas grandes (desktop) aumenta */
-@media (min-width: 992px) {
-  #team .team-member img {
-    width: 250px;
-    height: 250px;
+/*#team .team-card:hover {
+  transform: translateY(-8px);
+}*/
+
+#team .member-photo {
+  height: 280px;
+  object-fit: cover;
+  border-bottom: 5px solid #28a745;
+}
+
+/* Ícones de controle menores no mobile */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 60% !important;
+}
+
+@media (max-width: 576px) {
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    padding: 0.8rem !important;
   }
 }
 
-/* Em telas muito grandes (monitores wide) ainda maior */
-@media (min-width: 1400px) {
-  #team .team-member img {
-    width: 380px;
-    height: 380px;
-  }
-}
 
 
 /* =========================================
@@ -913,20 +812,3 @@ footer .border-top {
   }
 }
 
-
-/* ... outras regras do seu site ... */
-
-/* ===========================
-   Ajustes finais para modais
-   =========================== */
-.modal-dialog-scrollable .modal-content {
-  max-height: calc(100vh - 1rem);
-}
-
-.modal-dialog-scrollable .modal-body {
-  overflow-y: auto;
-}
-
-.modal {
-  overscroll-behavior: contain;
-}
