@@ -40,3 +40,73 @@ document.addEventListener("DOMContentLoaded", function () {
     bsCarousel._config.touch = false;
   }
 });
+
+
+// Slide - autoplay do slide do TEAM
+const track = document.querySelector('.team-carousel');
+const nextBtn = document.querySelector('.next-btn');
+const prevBtn = document.querySelector('.prev-btn');
+
+let index = 0;
+let autoplay;
+
+function moveCarousel() {
+  const cards = document.querySelectorAll('.team-card');
+  const cardWidth = cards[0].offsetWidth + 24; // largura + gap
+  const visibleCards = getVisibleCards();
+  const maxIndex = cards.length - visibleCards;
+
+  if (index > maxIndex) index = 0;
+  if (index < 0) index = maxIndex;
+
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+}
+
+function getVisibleCards() {
+  if (window.innerWidth < 576) return 1;
+  if (window.innerWidth < 992) return 2;
+  return 4;
+}
+
+nextBtn.addEventListener('click', () => {
+  index++;
+  moveCarousel();
+});
+
+prevBtn.addEventListener('click', () => {
+  index--;
+  moveCarousel();
+});
+
+function startAutoplay() {
+  autoplay = setInterval(() => {
+    index++;
+    moveCarousel();
+  }, 3000);
+}
+
+function stopAutoplay() {
+  clearInterval(autoplay);
+}
+
+track.addEventListener('mouseenter', stopAutoplay);
+track.addEventListener('mouseleave', startAutoplay);
+
+startAutoplay();
+
+
+//CÓDIGO PARA O CONTACT
+function ccupsHandleSubmit(e) {
+  const form = e.target;
+  const feedback = document.getElementById('ccupsFormFeedback');
+  feedback.className = 'alert alert-info mt-3';
+  feedback.textContent = 'Enviando...';
+  feedback.classList.remove('d-none');
+
+  setTimeout(() => {
+    feedback.className = 'alert alert-success mt-3';
+    feedback.textContent = 'Obrigado! Sua mensagem foi enviada com sucesso.';
+    form.reset();
+  }, 1200);
+  return true;
+}

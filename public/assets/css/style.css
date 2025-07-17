@@ -164,11 +164,20 @@ body {
   background-color: var(--cor-fundo);
 }
 
+html {
+  overflow-y: scroll;
+}
+
 html,
 body {
   width: 100%;
   overflow-x: hidden;
+
   /* previne vazamento */
+}
+
+body.modal-open {
+  padding-right: 0 !important;
 }
 
 /* --- Para Firefox (mais limitado) --- */
@@ -523,46 +532,73 @@ header {
    ================================ */
 #team {
   background: linear-gradient(135deg, #198754 50%, var(--verde-escuro-ccups) 50%);
-  /* #198754 é o verde Bootstrap, pode ajustar */
-  color: #212529;
-  /* texto escuro para contraste */
-  padding: 5rem 0;
-}
-
-
-#team .team-card {
-  border: none;
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
+  position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease;
 }
 
-/*#team .team-card:hover {
-  transform: translateY(-8px);
-}*/
+.team-carousel-wrapper {
+  position: relative;
+}
 
-#team .member-photo {
-  height: 280px;
+.team-carousel {
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
+}
+
+.team-card {
+  min-width: calc(100% / 4 - 1rem);
+  /* 4 por vez */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.member-photo {
+  width: 100%;
+  height: 220px;
   object-fit: cover;
-  border-bottom: 5px solid #28a745;
+  border-radius: 12px;
 }
 
-/* Ícones de controle menores no mobile */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-size: 60% !important;
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #198754;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
 }
 
-@media (max-width: 576px) {
+.prev-btn {
+  left: -20px;
+}
 
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    padding: 0.8rem !important;
+.next-btn {
+  right: -20px;
+}
+
+/* Responsivo */
+@media (max-width: 991px) {
+  .team-card {
+    min-width: calc(100% / 2 - 1rem);
+    /* 2 por vez */
   }
 }
 
+@media (max-width: 576px) {
+  .team-card {
+    min-width: 100%;
+    /* 1 por vez */
+  }
+}
 
 
 /* =========================================
@@ -657,9 +693,49 @@ header {
 
 /* =========================================
   SECTION CONTACT
+  =========================================
+ */
+#contact {
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 60%, #dff6e0 100%);
+  padding: 5rem 0;
+}
 
+#contact .card {
+  border-radius: 12px;
+}
 
+#contact img {
+  border-radius: 12px;
+}
 
+.social-icon {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: transform 0.3s;
+}
+
+.social-icon.facebook {
+  background: #3b5998;
+}
+
+.social-icon.instagram {
+  background: linear-gradient(45deg, #fd1d1d, #833ab4, #fcb045);
+}
+
+.social-icon.whatsapp {
+  background: #25d366;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
 
 
 
@@ -703,23 +779,11 @@ header {
   transition: color 0.3s ease;
 }
 
-.social-icons a {
-  width: 42px;
-  height: 42px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  transition: all 0.3s ease;
+.logo-footer {
+  max-width: 100px; /* Ajuste para o tamanho desejado */
+  height: auto; /* Mantém a proporção */
 }
 
-.social-icons a:hover {
-  background-color: var(--verde-ccups) !important;
-  color: var(--cor-branca) !important;
-  border-color: var(--verde-ccups) !important;
-  transform: translateY(-3px);
-}
 
 .bg-verde {
   background: linear-gradient(to right, #006400, #2e8b57);
