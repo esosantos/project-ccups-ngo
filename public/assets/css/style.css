@@ -705,9 +705,13 @@ header {
   border-radius: 12px;
 }
 
-#contact img {
-  border-radius: 12px;
+.contact-img {
+  height: 260px;        /* mantém altura consistente */
+  object-fit: cover;    /* preenche sem distorcer */
+  border-radius: 8px;   /* bordas arredondadas */
+  margin: 8px;          /* pequeno espaço para não colar nas bordas */
 }
+
 
 .social-icon {
   width: 50px;
