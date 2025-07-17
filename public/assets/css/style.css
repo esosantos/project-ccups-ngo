@@ -446,7 +446,7 @@ header {
   #home {
     padding-top: 6rem;
     /* espaço pro menu fixo */
-    background: linear-gradient(135deg, #198754 60%, #ffffff 40%);
+    background: linear-gradient(135deg, #198754 60%, var(--verde-escuro-ccups) 40%);
     /* ajusta ângulo */
   }
 }
@@ -654,6 +654,14 @@ header {
   background: #198754;
   color: #fff;
 }
+
+/* =========================================
+  SECTION CONTACT
+
+
+
+
+
 
 /* -------- Responsividade -------- */
 @media (max-width: 768px) {
