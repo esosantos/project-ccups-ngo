@@ -1,35 +1,42 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Seleciona todos os links do menu que devem fechar o offcanvas
+  // 1) FECHAR OFFCANVAS AO CLICAR NO MENU
   const navLinks = document.querySelectorAll('#offcanvasNavbar .nav-link');
-  
-  // Pega o offcanvas pelo id
   const offcanvasElement = document.getElementById('offcanvasNavbar');
-
-  // Instancia o objeto do Bootstrap para controlar o offcanvas
   const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement) || new bootstrap.Offcanvas(offcanvasElement);
 
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      // Fecha o offcanvas via método oficial do Bootstrap
       bsOffcanvas.hide();
     });
   });
-});
 
-
-  /*Função com o objetivo de sinalizar qual link esta ativo*/
-  document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll(".nav-link");
-
-    navLinks.forEach(link => {
-      link.addEventListener("click", function () {
-        // Remove active de todos
-        navLinks.forEach(l => l.classList.remove("active"));
-        // Adiciona active no clicado
-        this.classList.add("active");
-      });
+  // 2) MARCAR LINK ATIVO NO MENU
+  const allNavLinks = document.querySelectorAll(".nav-link");
+  allNavLinks.forEach(link => {
+    link.addEventListener("click", function () {
+      allNavLinks.forEach(l => l.classList.remove("active"));
+      this.classList.add("active");
     });
   });
 
 
 
+  // Botão copiar chave Pix
+  document.getElementById("copyPixBtn").addEventListener("click", function () {
+    const pixInput = document.getElementById("pixKeyInput");
+    pixInput.select();
+    pixInput.setSelectionRange(0, 99999); // Para mobile
+    document.execCommand("copy");
+
+    const feedback = document.getElementById("pixCopyFeedback");
+    feedback.classList.remove("d-none");
+    setTimeout(() => feedback.classList.add("d-none"), 2000);
+  });
+
+  // Corrigir touch no carousel da equipe (opcional)
+  var carousel = document.querySelector("#teamCarousel");
+  if (carousel) {
+    var bsCarousel = bootstrap.Carousel.getInstance(carousel) || new bootstrap.Carousel(carousel);
+    bsCarousel._config.touch = false;
+  }
+});

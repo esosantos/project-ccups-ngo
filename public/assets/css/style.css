@@ -1,7 +1,15 @@
-/* =============================
-   CSS Principal - CCUPS
-   Estrutura Inicial + Cores da Logo
-   ============================= */
+/*
+ * Arquivo: style.css
+ * Autor: Everaldo Santos de Oliveira
+ * Versão: 1.0.0
+ * Data de Criação: Julho de 2025
+ * Descrição: Estilos globais e específicos para a seção "Equipe" do site da ONG.
+ *
+ * Direitos Autorais:
+ * © 2025 [Centro Comunitário Unidos Pelo Social]. Todos os direitos reservados.
+ * Este código não pode ser reproduzido, distribuído ou transmitido
+ * de qualquer forma ou por qualquer meio, sem a permissão prévia por escrito do autor.
+ */
 
 
 /* =============================
@@ -10,29 +18,29 @@
 
 /* Paleta baseada na logo */
 :root {
-  --azul-ccups:       #2196F3;
-  --amarelo-ccups:    #FFEB3B;
-  --laranja-ccups:    #FF9800;
-  --marrom-ccups:     #795548;
-  --vermelho-ccups:   #F44336;
-  --verde-limao-ccups:#CDDC39;
-  --verde-ccups:      #4CAF50;
-  --verde-escuro-ccups: #255655;  
-  --preto-ccups:      #000000;
+  --azul-ccups: #2196F3;
+  --amarelo-ccups: #FFEB3B;
+  --laranja-ccups: #FF9800;
+  --marrom-ccups: #795548;
+  --vermelho-ccups: #F44336;
+  --verde-limao-ccups: #CDDC39;
+  --verde-ccups: #4CAF50;
+  --verde-escuro-ccups: #255655;
+  --preto-ccups: #000000;
   --cinza-ccups: #f1f3ef;
   --gold-ccups: #d4ac44;
 
   /* Cores auxiliares */
-  --cor-fundo:        #f9f9f9;
-  --cor-texto:        #222;
-  --cor-branca:       #ffffff;
-  --cor-cinza-claro:  #eeeeee;
+  --cor-fundo: #f9f9f9;
+  --cor-texto: #222;
+  --cor-branca: #ffffff;
+  --cor-cinza-claro: #eeeeee;
 
 
   /* =============================
    TIPOGRAFIA
    ============================= */
-     /* Tamanhos */
+  /* Tamanhos */
   --fs-base: 16px;
   --fs-pequeno: 14px;
   --fs-grande: 18px;
@@ -45,32 +53,66 @@
 
   /* Pesos */
   --fw-normal: 400;
-  --fw-link:500;
+  --fw-link: 500;
   --fw-semi: 600;
   --fw-bold: 700;
 }
 
 
 /* Classes utilitárias opcionais */
-.bg-azul      { background-color: var(--azul-ccups); }
-.bg-verde     { background-color: var(--verde-ccups); }
-.bg-laranja   { background-color: var(--laranja-ccups); }
-.bg-vermelho  { background-color: var(--vermelho-ccups); }
-.bg-marrom    { background-color: var(--marrom-ccups); }
-.bg-preto     { background-color: var(--preto-ccups); }
+.bg-azul {
+  background-color: var(--azul-ccups);
+}
 
-.text-azul      { color: var(--azul-ccups); }
-.text-verde     { color: var(--verde-ccups); }
-.text-laranja   { color: var(--laranja-ccups); }
-.text-vermelho  { color: var(--vermelho-ccups); }
-.text-marrom    { color: var(--marrom-ccups); }
-.text-preto     { color: var(--preto-ccups); }
+.bg-verde {
+  background-color: var(--verde-ccups);
+}
+
+.bg-laranja {
+  background-color: var(--laranja-ccups);
+}
+
+.bg-vermelho {
+  background-color: var(--vermelho-ccups);
+}
+
+.bg-marrom {
+  background-color: var(--marrom-ccups);
+}
+
+.bg-preto {
+  background-color: var(--preto-ccups);
+}
+
+.text-azul {
+  color: var(--azul-ccups);
+}
+
+.text-verde {
+  color: var(--verde-ccups);
+}
+
+.text-laranja {
+  color: var(--laranja-ccups);
+}
+
+.text-vermelho {
+  color: var(--vermelho-ccups);
+}
+
+.text-marrom {
+  color: var(--marrom-ccups);
+}
+
+.text-preto {
+  color: var(--preto-ccups);
+}
 
 
 /* =============================
    TIPOGRAFIA
    ============================= */
-   
+
 
 body {
   /* font-family: 'Poppins', sans-serif; */
@@ -79,7 +121,12 @@ body {
   /* background-color: var(--cor-fundo); */
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   /* font-weight: bold; */
   /* margin-bottom: 1rem; */
 }
@@ -93,55 +140,57 @@ p {
 /* =============================
    RESET BÁSICO
    ============================= */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura do elemento */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Garante que padding e border sejam incluídos na largura/altura do elemento */
 }
+
 html {
-    scroll-behavior: smooth; /* Para rolagem suave em links âncora */
+  scroll-behavior: smooth;
+  /* Para rolagem suave em links âncora */
 }
+
 body {
-    -webkit-font-smoothing: antialiased; /* Suaviza a fonte no Chrome/Safari */
-    -moz-osx-font-smoothing: grayscale; /* Suaviza a fonte no Firefox */
-    font-family: 'Poppins', sans-serif; /* Exemplo de fonte, descomente se usar */
-    font-size: 16px;
-    color: var(--cor-texto);
-    background-color: var(--cor-fundo);
+  -webkit-font-smoothing: antialiased;
+  /* Suaviza a fonte no Chrome/Safari */
+  -moz-osx-font-smoothing: grayscale;
+  /* Suaviza a fonte no Firefox */
+  font-family: 'Poppins', sans-serif;
+  /* Exemplo de fonte, descomente se usar */
+  font-size: 16px;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
 }
-html, body {
-    min-height: 100vh; /* Garante que a altura mínima da viewport seja coberta */
-    display: flex;
-    flex-direction: column; /* Para usar flexbox e empurrar o rodapé para baixo */
+
+html,
+body {
+  min-height: 100vh;
+  /* Garante que a altura mínima da viewport seja coberta */
+  display: flex;
+  flex-direction: column;
+  /* Para usar flexbox e empurrar o rodapé para baixo */
 }
 
 
 /* --- Para Firefox (mais limitado) --- */
 body {
-    scrollbar-color: var(--verde-ccups) var(--cor-fundo); /* thumb color track color */
-    scrollbar-width: thin; /* 'auto', 'thin', or 'none' */
+  scrollbar-color: var(--verde-ccups) var(--cor-fundo);
+  /* thumb color track color */
+  scrollbar-width: thin;
+  /* 'auto', 'thin', or 'none' */
 }
 
 /* O main precisa crescer para empurrar o footer */
 main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
+
 /* =============================
    BOTÕES
    ============================= */
 
-.btn-custom {
-  /* background-color: var(--verde-ccups); */
-  /* color: var(--cor-branca); */
-  /* padding: 10px 20px; */
-  /* border: none; */
-  /* border-radius: 5px; */
-  /* transition: background-color 0.3s ease; */
-}
-
-.btn-custom:hover {
-  /* background-color: var(--laranja-ccups); */
-}
 
 /*Configuração do Botão Contato*/
 .btn-contact {
@@ -154,24 +203,76 @@ main {
   display: inline-block;
   font-weight: 600;
   font-size: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* sombra suave */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* sombra suave */
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 
 .btn-contact:hover {
   background-color: var(--verde-ccups);
-  transform: scale(1.06); /* leve crescimento */
+  transform: scale(1.06);
+  /* leve crescimento */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-/*Configuração do Botão de fechar menu responsivo*/
-.nav-toggler{
-    border: none;
-    font-size: 1.25rem;
+
+.btn-more {
+  background-color: var(--cor-branca);
+  color: var(--verde-escuro-ccups);
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* sombra suave */
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
 }
-.nav-toggler:focus, .btn-close:focus{
-    box-shadow: none;
-    outline: none;
+
+.btn-more:hover {
+  background-color: var(--verde-ccups);
+  color: var(--cor-branca);
+  transform: scale(1.06);
+  /* leve crescimento */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-danger {
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* sombra suave */
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  color: var(--cor-branca);
+  transform: scale(1.06);
+  /* leve crescimento */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/*Configuração do Botão de fechar menu responsivo*/
+.nav-toggler {
+  border: none;
+  font-size: 1.25rem;
+}
+
+.nav-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
 }
 
 /* =============================
@@ -194,40 +295,47 @@ header {
 .hover-zoom {
   transition: transform 0.3s ease;
 }
+
 .hover-zoom:hover {
   transform: scale(1.03);
 }
 
 
-  /* Efeito de crescimento suave */
-  .hover-grow {
-    transition: all 0.3s ease;
-    transform-origin: center;
-  }
-  
-  .hover-grow:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-    z-index: 10;
-  }
-  
-  /* Melhoria para os cards de números */
-  .card-body .col-4 .hover-grow:hover {
-    background-color: #f8f9fa;
-    border-radius: 8px;
-  }
+/* Efeito de crescimento suave */
+.hover-grow {
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  z-index: 10;
+}
+
+/* Melhoria para os cards de números */
+.card-body .col-4 .hover-grow:hover {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
 
 
 .navbar-brand {
-    padding: 0.5rem 0;
-    margin-right: 0;
-    display: flex; /* ATIVADO O FLEXBOX para alinhar imagem e texto lado a lado */
-    align-items: center; /* Centraliza verticalmente a imagem e o texto */
-    color: var(--cor-branca); /* Cor do texto "CCUPS" */
-    font-size: 1.rem; /* Ajuste o tamanho da fonte do CCUPS aqui se for diferente de fs-4 */
+  padding: 0.5rem 0;
+  margin-right: 0;
+  display: flex;
+  /* ATIVADO O FLEXBOX para alinhar imagem e texto lado a lado */
+  align-items: center;
+  /* Centraliza verticalmente a imagem e o texto */
+  color: var(--cor-branca);
+  /* Cor do texto "CCUPS" */
+  font-size: 1.rem;
+  /* Ajuste o tamanho da fonte do CCUPS aqui se for diferente de fs-4 */
 }
+
 .logo-text {
-  font-size: clamp(1.7rem, 2vw + 0.5rem, 2.5rem); /* responsivo */
+  font-size: clamp(1.7rem, 2vw + 0.5rem, 2.5rem);
+  /* responsivo */
   font-weight: 800;
   font-family: 'Poppins', sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -241,34 +349,42 @@ header {
 }
 
 /*Configuração do Menu*/
-.nav-link{
-    color: var(--verde-escuro-ccups);
-    font-weight: var(--fw-link);
-    position: relative;
-}
-.nav-link:hover, .nav-link.active{
-    color: var(--verde-ccups);
-}
-.nav-link::before{
-    content: "";
-    position:absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background-color: var(--verde-escuro-ccups);
-    visibility: hidden;
-    transition: 0.3s ease-in-out;
-}
-.nav-link:hover::before, .nav-link.active::before{
-    width: 100%;
-    visibility: visible;
+.nav-link {
+  color: var(--verde-escuro-ccups);
+  font-weight: var(--fw-link);
+  position: relative;
 }
 
-/* Seção Home*/
+.nav-link:hover,
+.nav-link.active {
+  color: var(--verde-ccups);
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--verde-escuro-ccups);
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+  width: 100%;
+  visibility: visible;
+}
+
+
+/* ================================
+   Section HOME - 
+   ================================ */
 #home {
- /* background-color: #a8d5ba	; /* verde suave escolhido */
+
   color: var(--cor-branca);
   min-height: 100vh;
   padding-top: 5rem;
@@ -280,7 +396,8 @@ header {
 }
 
 .title-ccups {
-  font-size: clamp(2rem, 4vw + 1rem, 4rem); /* responsivo entre 2rem e 4rem */
+  font-size: clamp(2rem, 4vw + 1rem, 4rem);
+  /* responsivo entre 2rem e 4rem */
   font-weight: var(--fw-bold);
   color: var(--cor-branca);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -293,26 +410,29 @@ header {
 }
 
 .ccups-c2 {
-  color: var(--cor-branca); 
+  color: var(--cor-branca);
 }
 
 .ccups-c3 {
-  color: var(--vermelho-ccups); 
+  color: var(--vermelho-ccups);
 }
 
 .ccups-c4 {
-  color: var(--verde-ccups); 
+  color: var(--verde-ccups);
 }
 
 .ccups-c5 {
-  color: var(--verde-limao-ccups); /* Roxo Bootstrap */
+  color: var(--verde-limao-ccups);
+  /* Roxo Bootstrap */
 }
-.ccups-c6{
+
+.ccups-c6 {
   color: var(--azul-ccups);
 }
 
 .sub-title {
-  color: var(--cor-branca); /* verde escuro para contraste */
+  color: var(--cor-branca);
+  /* verde escuro para contraste */
   font-size: clamp(1.1rem, 2vw + 0.5rem, 1.4rem);
   font-weight: 500;
   line-height: 1.6;
@@ -321,67 +441,296 @@ header {
   padding-top: 20px;
   padding-bottom: 10px;
 }
+
 .text-justify {
   text-align: justify !important;
 }
 
-.btn-more{
-  background-color: var(--cor-branca);
-  color: var(--verde-escuro-ccups);
-  padding: 12px 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  border: none;
-  display: inline-block;
-  font-weight: 600;
-  font-size: 1.2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* sombra suave */
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
 
+/* ================================
+   Section ABOUT - 
+   ================================ */
+
+
+/* ================================
+   Section COURSES - 
+   ================================ */
+
+.card-img-top {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+  max-width: 512px;
+  max-height: 512px;
+  margin: 0 auto;
 }
 
-.btn-more:hover {
-  background-color: var(--verde-ccups);
-  color:var(--cor-branca);
-  transform: scale(1.06); /* leve crescimento */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-.btn-danger{
-   padding: 10px 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  border: none;
-  display: inline-block;
-  font-weight: 600;
-  font-size: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* sombra suave */
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-.btn-danger:hover {
-  color:var(--cor-branca);
-  transform: scale(1.06); /* leve crescimento */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-/*About*/
-/* Efeito hover na imagem (opcional) */
-
-
-/*Courses*/
-
-  .card-img-top {
-    object-fit: cover;
-    width: 100%;
-    height: 250px;
-    max-width: 512px;
-    max-height: 512px;
-    margin: 0 auto;
-  }
-
-.sub-text{
+.sub-text {
   font-size: var(--fs-grande);
 }
+
+
+
+/* ================================
+   Section TEAM - 
+   ================================ */
+
+/* ===== Team Section ===== */
+#team .team-member img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 5px solid var(--cor-branca);
+}
+
+.carousel-inner {
+  min-height: 450px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 50%;
+  filter: invert(1);
+}
+
+/* Botão Saiba Mais */
+#team .btn-success {
+  border-radius: 30px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+#team .btn-success:hover {
+  background-color: #157347;
+}
+
+/* Modal */
+.modal-content {
+  border-radius: 10px;
+}
+
+.modal-backdrop {
+  z-index: 1040 !important;
+  /* valor padrão */
+}
+
+.modal {
+  z-index: 1050 !important;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f1f1;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: #198754;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  background: #198754;
+  color: #fff;
+}
+
+/* Custom Carousel Controls */
+/* Botões padrão */
+.custom-control {
+  width: 60px;
+  height: 60px;
+  background: #198754;
+  /* Verde */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.custom-control:hover {
+  background: #157347;
+}
+
+.custom-icon {
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+/* Telas pequenas - reduz tamanho */
+@media (max-width: 576px) {
+  .custom-control {
+    width: 30px;
+    height: 30px;
+  }
+
+  .custom-icon {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Responsividade */
+/* Ajuste padrão (para mobile e tablets) */
+#team .team-member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Em telas grandes (desktop) aumenta */
+@media (min-width: 992px) {
+  #team .team-member img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Em telas muito grandes (monitores wide) ainda maior */
+@media (min-width: 1400px) {
+  #team .team-member img {
+    width: 380px;
+    height: 380px;
+  }
+}
+
+
+/* =========================================
+  SECTION DONATE-NOW
+   ========================================= */
+#donate-now {
+  /* bg definido no HTML como bg-light; pode reforçar aqui */
+  background: #f8f9fa;
+}
+
+#doe-agora h2 {
+  color: #198754;
+}
+
+#doe-agora .donation-list .list-group-item {
+  background: transparent;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 1rem;
+}
+
+#doe-agora .donation-list .list-group-item i {
+  font-size: 1.25rem;
+}
+
+#doe-agora .donation-impact {
+  list-style: none;
+  padding-left: 0;
+}
+
+#doe-agora .donation-impact li {
+  margin-bottom: 0.5rem;
+}
+
+#doe-agora .btn.btn-success {
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* -------- Modal Donate -------- */
+.modal-donate .modal-content {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.modal-donate .pix-qr-wrapper {
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.modal-donate .pix-qr-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.modal-donate .pix-key-wrapper .form-control {
+  font-size: 0.9rem;
+}
+
+.modal-donate .bank-info {
+  max-width: 320px;
+}
+
+/* Social icons (caso queira usar no modal) */
+.modal-donate .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal-donate .social-icons .social-icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #e9ecef;
+  color: #198754;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: 0.25s;
+  text-decoration: none;
+}
+
+.modal-donate .social-icons .social-icon:hover {
+  background: #198754;
+  color: #fff;
+}
+
+/* -------- Responsividade -------- */
+@media (max-width: 768px) {
+  #doe-agora .donation-list .list-group-item {
+    font-size: 0.95rem;
+  }
+
+  #doe-agora .donation-list .list-group-item i {
+    font-size: 1.1rem;
+  }
+
+  #doe-agora .donation-impact li {
+    font-size: 0.95rem;
+  }
+
+  .modal-donate .bank-info {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  #doe-agora h2 {
+    font-size: 2rem;
+  }
+
+  #doe-agora .lead {
+    font-size: 1rem;
+  }
+}
+
+
+
 /* ================================
    Footer Estilizado - CCUPS
    ================================ */
@@ -403,9 +752,9 @@ header {
 }
 
 .social-icons a:hover {
-  background-color: var(--azul-ccups) !important;
-  color:var(--cor-branca) !important;
-  border-color: var(--azul-ccups) !important;
+  background-color: var(--verde-ccups) !important;
+  color: var(--cor-branca) !important;
+  border-color: var(--verde-ccups) !important;
   transform: translateY(-3px);
 }
 
@@ -424,7 +773,7 @@ footer a {
 
 footer a:hover {
   color: var(--azul-ccups) !important;
-  
+
 }
 
 footer .border-top {
@@ -457,7 +806,8 @@ footer .border-top {
 /* Hover e ativo (inicialmente com traço pequeno) */
 .nav-link:hover::before,
 .nav-link.active::before {
-  width: 40%;   /* largura padrão em telas menores */
+  width: 40%;
+  /* largura padrão em telas menores */
   visibility: visible;
 }
 
@@ -487,7 +837,8 @@ footer .border-top {
 /* Hover e ativo (inicialmente com traço pequeno) */
 .nav-link:hover::before,
 .nav-link.active::before {
-  width: 40%;   /* largura padrão em telas menores */
+  width: 40%;
+  /* largura padrão em telas menores */
   visibility: visible;
 }
 
@@ -522,13 +873,15 @@ footer .border-top {
 
 /* Texto ativo (destacado) */
 .nav-link.active {
-  color: var(--verde-ccups); /* cor diferente para ativo */
+  color: var(--verde-ccups);
+  /* cor diferente para ativo */
 }
 
 
 /* =============== TELAS GRANDES (DESKTOP) =============== */
 
 @media (min-width: 993px) {
+
   .nav-link:hover::before,
   .nav-link.active::before {
     width: 100%;
@@ -540,11 +893,13 @@ footer .border-top {
 
 @media (max-width: 992px) {
   .nav-link::before {
-    display: none; /* oculta totalmente o traço */
+    display: none;
+    /* oculta totalmente o traço */
   }
 
   .nav-link:hover {
-    transform: scale(1.1); /* texto cresce levemente */
+    transform: scale(1.1);
+    /* texto cresce levemente */
   }
 
   .nav-link.active {
@@ -556,4 +911,22 @@ footer .border-top {
   .logo-header {
     display: none;
   }
+}
+
+
+/* ... outras regras do seu site ... */
+
+/* ===========================
+   Ajustes finais para modais
+   =========================== */
+.modal-dialog-scrollable .modal-content {
+  max-height: calc(100vh - 1rem);
+}
+
+.modal-dialog-scrollable .modal-body {
+  overflow-y: auto;
+}
+
+.modal {
+  overscroll-behavior: contain;
 }

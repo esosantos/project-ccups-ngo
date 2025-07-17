@@ -93,7 +93,7 @@
     </nav>
   </header>
   <main class="padding-top">
-    <!-- Seção: Home -->
+    <!-- Section Home -->
     <section id="home" class="d-flex align-items-center bg-success justify-content-center text-center min-vh-100 py-5">
       <div class="container">
         <div class="row justify-content-center">
@@ -117,7 +117,7 @@
     </section>
 
 
-    <!-- Seção: Sobre -->
+    <!-- Section About -->
     <section id="about" class="py-5 bg-light">
       <div class="container">
         <!-- Cabeçalho -->
@@ -157,7 +157,8 @@
                     <i class="bi bi-lightbulb fs-3 text-success me-2"></i>
                     Por Que Existimos?
                   </h4>
-                  <p class="text-white">Nascemos da urgência em combater a evasão escolar, o envolvimento com drogas e a violência que
+                  <p class="text-white">Nascemos da urgência em combater a evasão escolar, o envolvimento com drogas e a
+                    violência que
                     afetavam nossos jovens. A cada história de transformação - como a de Marcos, ex-participante que
                     hoje é instrutor de capoeira, ou de Ana, que descobriu no ballet sua vocação profissional -
                     reafirmamos nosso propósito: ser farol de oportunidades onde antes havia apenas vulnerabilidade.</p>
@@ -297,7 +298,7 @@
       </div>
     </section>
 
-    <!-- Seção: cursos -->
+    <!-- Section Courses -->
 
     <section id="courses" class="py-5 bg-light">
       <div class="container bg-white pt-5">
@@ -306,17 +307,14 @@
           <div class="col-lg-8 text-center">
             <h2 class="display-5 fw-bold text-success mb-3">Nossos Cursos e Oficinas</h2>
             <div class="border-bottom border-3 border-warning mx-auto" style="width: 80px;"></div>
-            <p class="mt-3 text-success sub-text">Oferecemos diversas atividades educativas, culturais e esportivas para crianças e
+            <p class="mt-3 text-success sub-text">Oferecemos diversas atividades educativas, culturais e esportivas para
+              crianças e
               adolescentes de 4 a 17 anos.</p>
           </div>
         </div>
 
         <!-- Cards -->
         <div class="row g-4">
-          <!-- Curso -->
-          <!-- Reutilizável para todos -->
-          <!-- CARD -->
-          <!-- Capoeira -->
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 border-0 shadow-sm">
               <img src="assets/img/capoeira.jpg" class="card-img-top" alt="Capoeira">
@@ -658,7 +656,7 @@
     </section>
 
 
-    <!-- Seção: serviços -->
+    <!-- Section Services -->
     <section id="services" class="py-5 bg-light">
       <div class="container">
         <h2 class="text-center mb-5 text-success display-5 fw-bold">Nossos Atendimentos</h2>
@@ -753,13 +751,286 @@
         </div>
       </div>
     </section>
-    <!-- Seção: equipe -->
-    <section id="team">
 
+    <!-- Section Team -->
+    <section id="team" class="py-5 bg-white">
+      <div class="container">
+        <!-- Título -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+            <h2 class="display-5 fw-bold text-success mb-3">Nossos Equipe</h2>
+            <div class="border-bottom border-3 border-warning mx-auto" style="width: 80px;"></div>
+            <p class="mt-3 text-success sub-text">Por trás de cada sorriso de uma criança e de cada sonho que floresce,
+              existe uma equipe que acredita no poder do amor e da educação. Nossa equipe não é apenas formada por
+              profissionais — é composta por pessoas que carregam no peito a missão de transformar vidas, que estendem
+              as mãos para ensinar, acolher e inspirar.</p>
+          </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="row justify-content-center bg-light">
+          <div class="col-lg-10 pt-3 pb-5 rounded">
+            <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000" data-bs-touch="false">
+              <div class="carousel-inner">
+
+                <!-- Membro 1 -->
+                <div class="carousel-item active">
+                  <div class="team-member text-center px-4">
+                    <div class="member-photo mx-auto mb-4">
+                      <img src="assets/img/indson_teacher.jpg" class="img-fluid rounded-4 shadow" alt="Idson Conceição">
+                    </div>
+                    <h3 class="mb-1">Idson Conceição</h3>
+                    <p class="text-success fw-semibold mb-3">Licenciado em Informática</p>
+                    <button class="btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#memberModal1">
+                      Saiba mais
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Membro 2 -->
+                <div class="carousel-item">
+                  <div class="team-member text-center px-4">
+                    <div class="member-photo mx-auto mb-4">
+                      <img src="assets/img/membro2.jpg" class="img-fluid rounded-4 shadow" alt="Maria Silva">
+                    </div>
+                    <h3 class="mb-1">Maria Silva</h3>
+                    <p class="text-success fw-semibold mb-3">Assistente Social</p>
+                    <button class="btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#memberModal2">
+                      Saiba mais
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Membro 3 -->
+                <div class="carousel-item">
+                  <div class="team-member text-center px-4">
+                    <div class="member-photo mx-auto mb-4">
+                      <img src="assets/img/membro3.jpg" class="img-fluid rounded-4 shadow" alt="Carlos Oliveira">
+                    </div>
+                    <h3 class="mb-1">Carlos Oliveira</h3>
+                    <p class="text-success fw-semibold mb-3">Coordenador Pedagógico</p>
+                    <button class="btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#memberModal3">
+                      Saiba mais
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Controles -->
+
+              <button class="carousel-control-prev custom-control" type="button" data-bs-target="#teamCarousel"
+                data-bs-slide="prev">
+                <span class="custom-icon">
+                  <i class="bi bi-chevron-left"></i>
+                </span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next custom-control" type="button" data-bs-target="#teamCarousel"
+                data-bs-slide="next">
+                <span class="custom-icon">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+                <span class="visually-hidden">Próximo</span>
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Seção: Contato -->
-    <section id="contato">
+    <!-- Modais -->
+    <!-- Modal Membro 1 -->
+    <div class="modal fade" id="memberModal1" tabindex="-1" aria-labelledby="memberModalLabel1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title">Idson Conceição</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img src="assets/img/indson_teacher.jpg" class="img-fluid rounded-circle mb-3" style="max-width: 180px;">
+            <div class="social-icons mb-3">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p><strong>Formação:</strong> Licenciado em Informática</p>
+            <p><strong>Cargo:</strong> Coordenação Geral</p>
+            <p><strong>Atuação:</strong> Gestão geral do centro comunitário e projetos tecnológicos.</p>
+            <p><strong>Experiência:</strong> 10 anos em inclusão digital e educação comunitária.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Membro 2 -->
+    <div class="modal fade" id="memberModal2" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title">Maria Silva</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img src="assets/img/membro2.jpg" class="img-fluid rounded-circle mb-3" style="max-width: 180px;">
+            <div class="social-icons mb-3">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p><strong>Formação:</strong> Assistente Social</p>
+            <p><strong>Atuação:</strong> Atendimento às famílias e projetos sociais comunitários.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Membro 3 -->
+    <div class="modal fade" id="memberModal3" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title">Carlos Oliveira</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img src="assets/img/membro3.jpg" class="img-fluid rounded-circle mb-3" style="max-width: 180px;">
+            <div class="social-icons mb-3">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p><strong>Cargo:</strong> Coordenador Pedagógico</p>
+            <p><strong>Experiência:</strong> 8 anos em projetos de educação comunitária.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section Doe Agora -->
+     <!-- Section Doe Agora -->
+<section id="donate-now" class="py-5 bg-light">
+  <div class="container">
+    <!-- Título -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold display-6 text-success">Doe Agora</h2>
+      <p class="lead text-muted mb-0">Pequenos gestos. Grandes mudanças.</p>
+    </div>
+
+    <div class="row g-5 align-items-start">
+      <!-- Coluna 1: Doações em Itens -->
+      <div class="col-lg-6">
+        <h3 class="h4 fw-semibold mb-3 text-dark">O que você pode doar</h3>
+        <p class="text-muted mb-4">Sua doação material chega onde mais precisa e apoia diretamente crianças e famílias.</p>
+        <ul class="list-group list-group-flush donation-list">
+          <li class="list-group-item d-flex align-items-center">
+            <i class="fas fa-tshirt me-3 text-success"></i> Roupas infantis e adultas (limpas e em bom estado)
+          </li>
+          <li class="list-group-item d-flex align-items-center">
+            <i class="fas fa-utensils me-3 text-success"></i> Alimentos não perecíveis (arroz, feijão, macarrão...)
+          </li>
+          <li class="list-group-item d-flex align-items-center">
+            <i class="fas fa-gift me-3 text-success"></i> Brinquedos educativos e em bom estado
+          </li>
+          <li class="list-group-item d-flex align-items-center">
+            <i class="fas fa-shoe-prints me-3 text-success"></i> Calçados para todas as idades
+          </li>
+          <li class="list-group-item d-flex align-items-center">
+            <i class="fas fa-book me-3 text-success"></i> Livros, cadernos e material escolar
+          </li>
+          <li class="list-group-item d-flex align-items-center">
+            <i class="fas fa-bed me-3 text-success"></i> Roupas de cama e cobertores (quando disponíveis)
+          </li>
+        </ul>
+        <div class="mt-4 small text-muted">
+          * As doações podem ser entregues presencialmente em nossa sede. Entre em contato para agendar.
+        </div>
+      </div>
+
+      <!-- Coluna 2: Doações Financeiras -->
+      <div class="col-lg-6">
+        <h3 class="h4 fw-semibold mb-3 text-dark">Apoie financeiramente</h3>
+        <p class="text-muted">
+          As doações financeiras nos ajudam a manter programas de alimentação, reforço escolar,
+          oficinas de tecnologia e atendimento social à comunidade.
+        </p>
+        <ul class="text-muted mb-4 donation-impact">
+          <li><strong>R$ 30</strong> ajudam a garantir material escolar.</li>
+          <li><strong>R$ 50</strong> contribuem com kits de alimentação.</li>
+          <li><strong>R$ 100</strong> apoiam oficinas educativas para as crianças.</li>
+        </ul>
+
+        <button class="btn btn-success btn-lg px-4" data-bs-toggle="modal" data-bs-target="#modalDoeAgora">
+          Doar Agora
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal Doe Agora -->
+<div class="modal fade" id="modalDoeAgora" tabindex="-1" aria-labelledby="modalDoeAgoraLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-md modal-donate">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="modalDoeAgoraLabel">Faça sua doação</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body text-center">
+
+        <!-- QR Code Dinâmico -->
+        <div id="pixQrContainer" class="d-flex justify-content-center mb-3"></div>
+        <p class="small text-muted mb-4">Aponte a câmera do app do seu banco para o QR Code.</p>
+
+        <!-- Chave PIX Copiável -->
+        <div class="pix-key-wrapper mb-4">
+          <div class="input-group">
+            <input type="text" id="pixKeyInput" class="form-control form-control-sm"
+              value="chavepix@ccups.ong.br" readonly>
+            <button class="btn btn-outline-success btn-sm" type="button" id="copyPixBtn"
+              aria-label="Copiar chave Pix">
+              Copiar
+            </button>
+          </div>
+          <div id="pixCopyFeedback" class="form-text small text-success d-none">Chave Pix copiada!</div>
+        </div>
+
+        <!-- Dados Bancários -->
+        <div class="bank-info text-start mx-auto mb-3">
+          <h6 class="text-success fw-bold mb-2">Dados Bancários (Transferência / TED / DOC)</h6>
+          <ul class="list-unstyled small mb-0">
+            <li><strong>Instituição:</strong> NUBANK</li>
+            <li><strong>Agência:</strong>000-1 </li>
+            <li><strong>Conta:</strong>618837871 </li>
+            <li><strong>CPF:</strong> 816593855-04</li>
+            <li><strong>Favorecido:</strong> Everaldo</li>
+          </ul>
+        </div>
+
+        <hr class="my-4">
+
+        <p class="small text-muted mb-0">
+          Enviou a doação? Envie o comprovante para <strong>contato@ccups.ong.br</strong> para emitirmos recibo.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <!-- QRCode.js -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+
+    <!-- Script para gerar QR Code e copiar Pix -->
+    <script>
+     
+    </script>
+
+
+
+
+    <!-- Seção: Contact -->
+    <section id="contact">
 
     </section>
   </main>
@@ -1034,7 +1305,7 @@
                 <!-- Rodapé -->
                 <div class="modal-footer justify-content-between">
                   <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-                  
+
                 </div>
               </div>
             </div>
@@ -1047,6 +1318,10 @@
   </footer>
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- API gerar QRCODE-->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
 
 
   <!-- JS externo (ainda vazio, mas pronto para uso futuro) -->
