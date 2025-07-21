@@ -499,6 +499,113 @@ header {
 }
 
 
+/* ================================
+   Table and List 
+   ================================ */
+
+/* TABLE and List - Versão Final Consolidada */
+
+/* Desktop: mantém padrão alinhado à esquerda */
+.table-mobile {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-mobile thead th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background-color: #2e7d32; /* Verde forte para cabeçalho */
+  color: white;
+}
+
+/* Linhas zebradas - Verde fraco (odd) e médio (even) */
+.table-mobile tbody tr:nth-child(odd) {
+  background-color: #e8f5e9; /* Verde bem claro */
+}
+
+.table-mobile tbody tr:nth-child(even) {
+  background-color: #c8e6c9; /* Verde claro */
+}
+
+.table-mobile td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  vertical-align: middle;
+}
+
+.table-mobile td:first-child {
+  font-weight: 700;
+}
+
+/* Mobile: abaixo de 768px */
+@media (max-width: 767.98px) {
+  /* Esconde cabeçalho */
+  .table-mobile thead {
+    display: none;
+  }
+
+  /* Transforma tabela em bloco */
+  .table-mobile,
+  .table-mobile tbody,
+  .table-mobile tr,
+  .table-mobile td {
+    display: block;
+    width: 100%;
+  }
+
+  /* Cada linha vira um card com efeito zebrado */
+  .table-mobile tr {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+
+  /* Mantém o zebrado no mobile */
+  .table-mobile tr:nth-child(odd) {
+    background-color: #e8f5e9;
+  }
+  
+  .table-mobile tr:nth-child(even) {
+    background-color: #c8e6c9;
+  }
+
+  .table-mobile td {
+    padding-left: 8rem;
+    position: relative;
+    text-align: left;
+    border: none;
+    background: transparent !important;
+  }
+
+  .table-mobile td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    color: #2e7d32; /* Verde forte para labels */
+    white-space: nowrap;
+    min-width: 6rem;
+    text-align: left;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Nome do curso destacado no mobile */
+  .table-mobile td:first-child {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+  }
+
+  /* Remove label do nome do curso (primeira coluna) */
+  .table-mobile td:first-child::before {
+    display: none;
+  }
+}
 
 /* ================================
    Section TEAM - 

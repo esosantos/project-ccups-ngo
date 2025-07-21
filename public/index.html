@@ -515,7 +515,6 @@
 
 
     <!---Table and List-->
-
     <section id="horarios" class="py-5 bg-white">
       <div class="container">
         <div class="card border-0 shadow">
@@ -524,9 +523,8 @@
               <i class="bi bi-calendar-week"></i> Horários das Oficinas
             </h3>
 
-            <!-- TABELA (VISÍVEL EM TELAS MÉDIAS OU MAIORES) -->
-            <div class="table-responsive d-none d-md-block">
-              <table class="table table-striped table-hover align-middle">
+            <div class="table-responsive">
+              <table class="table table-striped table-hover align-middle table-mobile">
                 <thead class="table-success">
                   <tr>
                     <th>Oficina</th>
@@ -540,109 +538,69 @@
                   <tr>
                     <td>Capoeira</td>
                     <td>5–17 anos</td>
-                    <td>Ter, Qui </td>
-                    <td>19:00 – 21:00</td>
+                    <td>Ter, Qui</td>
+                    <td>19h às 21h</td>
                     <td>Paróquia Sto Antônio</td>
                   </tr>
                   <tr>
                     <td>Ballet/Jazz</td>
                     <td>4–12 anos</td>
                     <td>Ter, Qui</td>
-                    <td>08:00 – 11:20 / 13:30 – 17:40</td>
+                    <td>08h às 11h / 13h às 17h</td>
                     <td>Sede</td>
                   </tr>
                   <tr>
                     <td>Boxe</td>
                     <td>6–17 anos</td>
                     <td>Seg, Qua</td>
-                    <td>10:00 - 12:00</td>
+                    <td>10h às 11h</td>
                     <td>Sede</td>
                   </tr>
-                   <tr>
-                    <td>Jiu-Jitsu</td>
-                    <td>6–17 anos</td>
-                    <td>Seg, Qua</td>
-                    <td>08:00 – 09:00 - 10:00(manhã) / 15:30 - 17:00(tarde)</td>
+                  <tr>
+                    <td>Boxe</td>
+                    <td>Adulto</td>
+                    <td>Ter, Qui</td>
+                    <td>20h às 21h</td>
                     <td>Sede</td>
                   </tr>
                   <tr>
                     <td>Informática</td>
                     <td>7–17 anos</td>
                     <td>Seg, Qua</td>
-                    <td>08:00 – 09:00 / 13:30 – 14:30</td>
+                    <td>08h às 09h / 13h às 14h</td>
                     <td>Sede</td>
                   </tr>
                   <tr>
                     <td>Empoderamento</td>
                     <td>6–17 anos</td>
                     <td>Ter, Qui</td>
-                    <td>10:00 – 11:00 / 16:30 – 17:30</td>
+                    <td>10h às 11h / 16h às 17h</td>
                     <td>Sede</td>
                   </tr>
                   <tr>
                     <td>Futebol</td>
                     <td>8–17 anos</td>
                     <td>Sábado</td>
-                    <td>14:00 – 17:00</td>
+                    <td>14h às 17h</td>
                     <td>Campo da Comunidade</td>
+                  </tr>
+                  <tr>
+                    <td>Jiu-Jítsu</td>
+                    <td>10–18 anos</td>
+                    <td>Seg, Qua</td>
+                    <td>09h às 10h</td>
+                    <td>Sede</td>
+                  </tr>
+                  <tr>
+                    <td>Jiu-Jítsu</td>
+                    <td>10–18 anos</td>
+                    <td>Seg, Qua e Sex</td>
+                    <td>19h às 21h</td>
+                    <td>Sede</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-
-            <!-- LISTA (VISÍVEL SOMENTE EM TELAS PEQUENAS) -->
-            <div class="d-block d-md-none">
-              <div class="list-group">
-                <div class="list-group-item">
-                  <h5 class="mb-1 fw-bold">Capoeira</h5>
-                  <p class="mb-1">Idade: 5–17 anos</p>
-                  <p class="mb-1">Dias: Seg, Qua, Sex</p>
-                  <p class="mb-1">Horário: 17:30 – 18:30</p>
-                  <small class="text-muted">Local: Sede</small>
-                </div>
-
-                <div class="list-group-item">
-                  <h5 class="mb-1 fw-bold">Ballet</h5>
-                  <p class="mb-1">Idade: 4–12 anos</p>
-                  <p class="mb-1">Dias: Seg, Qua</p>
-                  <p class="mb-1">Horário: 09:30 – 11:00 / 13:30 – 16:00</p>
-                  <small class="text-muted">Local: Sede</small>
-                </div>
-
-                <div class="list-group-item">
-                  <h5 class="mb-1 fw-bold">Boxe</h5>
-                  <p class="mb-1">Idade: 6–17 anos</p>
-                  <p class="mb-1">Dias: Seg, Qua</p>
-                  <p class="mb-1">Horário: 09:00 – 10:00 / 16:30 – 17:30</p>
-                  <small class="text-muted">Local: Sede</small>
-                </div>
-
-                <div class="list-group-item">
-                  <h5 class="mb-1 fw-bold">Futebol</h5>
-                  <p class="mb-1">Idade: 8–17 anos</p>
-                  <p class="mb-1">Dias: Sábado</p>
-                  <p class="mb-1">Horário: 14:00 – 17:00</p>
-                  <small class="text-muted">Local: Campo da Comunidade</small>
-                </div>
-
-                <div class="list-group-item">
-                  <h5 class="mb-1 fw-bold">Informática</h5>
-                  <p class="mb-1">Idade: 7–17 anos</p>
-                  <p class="mb-1">Dias: Seg, Qua</p>
-                  <p class="mb-1">Horário: 08:00 – 09:00 / 13:30 – 14:30</p>
-                  <small class="text-muted">Local: Sede</small>
-                </div>
-
-                <div class="list-group-item">
-                  <h5 class="mb-1 fw-bold">Empoderamento</h5>
-                  <p class="mb-1">Idade: 6–17 anos</p>
-                  <p class="mb-1">Dias: Ter, Qui</p>
-                  <p class="mb-1">Horário: 10:00 – 11:00 / 16:30 – 17:30</p>
-                  <small class="text-muted">Local: Sede</small>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
@@ -1406,32 +1364,29 @@
                 Envie sua mensagem
               </div>
               <div class="card-body">
-                <form id="ccups-contact-form" action="https://docs.google.com/forms/d/e/SEU_FORM_ID/formResponse"
-                  method="POST" target="hidden_iframe" onsubmit="return ccupsHandleSubmit(event);">
-
+                <form id="ccups-contact-form" action="assets/php/enviar-email.php" method="POST">
                   <div class="row g-3">
                     <div class="col-md-6">
                       <label for="ccupsNome" class="form-label">Nome*</label>
-                      <input type="text" class="form-control" id="ccupsNome" name="entry.NOME_ID" required>
+                      <input type="text" class="form-control" id="ccupsNome" name="nome" required>
                     </div>
                     <div class="col-md-6">
                       <label for="ccupsTel" class="form-label">Telefone*</label>
-                      <input type="tel" class="form-control" id="ccupsTel" name="entry.TEL_ID" required>
+                      <input type="tel" class="form-control" id="ccupsTel" name="telefone" required>
                     </div>
                     <div class="col-12">
                       <label for="ccupsAssunto" class="form-label">Assunto*</label>
-                      <input type="text" class="form-control" id="ccupsAssunto" name="entry.ASSUNTO_ID" required>
+                      <input type="text" class="form-control" id="ccupsAssunto" name="assunto" required>
                     </div>
                     <div class="col-12">
                       <label for="ccupsMsg" class="form-label">Mensagem*</label>
-                      <textarea class="form-control" id="ccupsMsg" name="entry.MSG_ID" rows="5" required></textarea>
+                      <textarea class="form-control" id="ccupsMsg" name="mensagem" rows="5" required></textarea>
                     </div>
                     <div class="col-12 text-end">
                       <button type="submit" class="btn btn-success px-4">Enviar</button>
                     </div>
                   </div>
                 </form>
-                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
                 <div id="ccupsFormFeedback" class="alert d-none mt-3" role="alert"></div>
               </div>
             </div>

@@ -120,3 +120,55 @@ function ccupsHandleSubmit(e) {
     modal.show();
   }
 
+
+  //INSERIR OS LABELS DAS TABELAS DE HORARIOS
+document.addEventListener("DOMContentLoaded", function () {
+  const headers = Array.from(document.querySelectorAll(".table-mobile thead th")).map(
+    (th) => th.innerText
+  );
+
+  document.querySelectorAll(".table-mobile tbody tr").forEach((row) => {
+    row.querySelectorAll("td").forEach((td, idx) => {
+      if (!td.hasAttribute("data-label")) {
+        td.setAttribute("data-label", headers[idx]);
+      }
+    });
+  });
+});
+
+
+//Validação do Formulario
+
+document.getElementById('ccups-contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const form = e.target;
+  const feedback = document.getElementById('ccupsFormFeedback');
+  
+  // Envia o formulário via AJAX
+document.getElementById('ccups-contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const form = e.target;
+  const feedback = document.getElementById('ccupsFormFeedback');
+  
+  fetch('assets/php/enviar-email.php', {
+    method: 'POST',
+    body: new FormData(form),
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    feedback.classList.remove('d-none', 'alert-danger', 'alert-success');
+    feedback.classList.add(data.success ? 'alert-success' : 'alert-danger');
+    feedback.textContent = data.message;
+    if(data.success) form.reset();
+  })
+  .catch(error => {
+    feedback.classList.remove('d-none', 'alert-success');
+    feedback.classList.add('alert-danger');
+    feedback.textContent = 'Erro na conexão. Tente novamente.';
+  });
+});
