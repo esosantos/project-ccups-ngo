@@ -110,3 +110,13 @@ function ccupsHandleSubmit(e) {
   }, 1200);
   return true;
 }
+
+//modal foto da ONG
+
+  function openImageModal(imgElement) {
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = imgElement.src;
+    const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+    modal.show();
+  }
+
