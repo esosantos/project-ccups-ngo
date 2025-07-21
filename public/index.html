@@ -1366,24 +1366,47 @@
               <div class="card-body">
                 <form id="ccups-contact-form" action="assets/php/enviar-email.php" method="POST">
                   <div class="row g-3">
-                    <div class="col-md-6">
+                    <!-- Nome -->
+                    <div class="col-12">
                       <label for="ccupsNome" class="form-label">Nome*</label>
-                      <input type="text" class="form-control" id="ccupsNome" name="nome" required>
+                      <input type="text" class="form-control" id="ccupsNome" name="nome" placeholder="Seu nome completo"
+                        required>
                     </div>
-                    <div class="col-md-6">
+
+                    <!-- Telefone -->
+                    <div class="col-12">
                       <label for="ccupsTel" class="form-label">Telefone*</label>
-                      <input type="tel" class="form-control" id="ccupsTel" name="telefone" required>
+                      <input type="tel" class="form-control" id="ccupsTel" name="telefone" placeholder="(21) 98765-4321"
+                        required>
                     </div>
+
+                    <!-- Email -->
+                    <div class="col-12">
+                      <label for="ccupsEmail" class="form-label">Email*</label>
+                      <input type="email" class="form-control" id="ccupsEmail" name="email" placeholder="seu@email.com"
+                        required>
+                    </div>
+
+                    <!-- Assunto -->
                     <div class="col-12">
                       <label for="ccupsAssunto" class="form-label">Assunto*</label>
-                      <input type="text" class="form-control" id="ccupsAssunto" name="assunto" required>
+                      <input type="text" class="form-control" id="ccupsAssunto" name="assunto"
+                        placeholder="Sobre o que deseja falar?" required>
                     </div>
+
+                    <!-- Descrição -->
                     <div class="col-12">
-                      <label for="ccupsMsg" class="form-label">Mensagem*</label>
-                      <textarea class="form-control" id="ccupsMsg" name="mensagem" rows="5" required></textarea>
+                      <label for="ccupsMensagem" class="form-label">Descrição*</label>
+                      <textarea class="form-control" id="ccupsMensagem" name="descricao" rows="5"
+                        placeholder="Descreva sua mensagem com detalhes..." required></textarea>
                     </div>
+
+                    <!-- Botão de Envio -->
                     <div class="col-12 text-end">
-                      <button type="submit" class="btn btn-success px-4">Enviar</button>
+                      <button type="submit" class="btn btn-success px-4">
+                        <span class="submit-text">Enviar Mensagem</span>
+                        <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                      </button>
                     </div>
                   </div>
                 </form>

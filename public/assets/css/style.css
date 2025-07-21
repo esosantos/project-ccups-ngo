@@ -814,7 +814,97 @@ header {
   /* pequeno espaço para não colar nas bordas */
 }
 
+/*Formulario*/
+/* ============================================= */
+/* ESTILOS BASE PARA CAMPOS DO FORMULÁRIO */
+/* ============================================= */
+.form-control {
+  /* Layout */
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  
+  /* Tipografia */
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--verde-escuro-ccups);
+  
+  /* Aparência */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--cor-branca);
+  background-clip: padding-box;
+  border: 1px solid var(--verde-escuro-ccups);
+  border-radius: var(--bs-border-radius);
+  
+  /* Espaçamento */
+  margin-bottom: 1rem;
+  
+  /* Transição suave */
+  transition: border-color 0.2s ease;
+}
 
+/* ============================================= */
+/* REMOÇÃO TOTAL DO FOCO PADRÃO */
+/* ============================================= */
+.form-control:focus,
+.form-control:active,
+.form-control:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: var(--verde-escuro-ccups) !important;
+}
+
+/* ============================================= */
+/* ESTADOS DOS CAMPOS */
+/* ============================================= */
+/* Campo inválido */
+.form-control:required:not(:placeholder-shown):invalid {
+  border-color: #dc3545;
+}
+
+/* Campo preenchido */
+.form-control:not(:placeholder-shown) {
+  border-color: var(--verde-ccups);
+}
+
+/* Placeholder */
+.form-control::placeholder {
+  color: #6c757d;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* ============================================= */
+/* LABELS */
+/* ============================================= */
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--verde-escuro-ccups);
+}
+
+/* ============================================= */
+/* ESTADO HOVER (OPCIONAL) */
+/* ============================================= */
+@media (hover: hover) {
+  .form-control:hover {
+    border-color: var(--verde-ccups);
+  }
+}
+
+/* Botão de envio */
+.btn-success {
+  transition: all 0.3s ease;
+}
+
+/* Feedback visual */
+#ccupsFormFeedback {
+  transition: all 0.3s ease;
+}
 .social-icon {
   width: 50px;
   height: 50px;

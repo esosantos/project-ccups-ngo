@@ -138,21 +138,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //Validação do Formulario
-
 document.getElementById('ccups-contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
   
   const form = e.target;
   const feedback = document.getElementById('ccupsFormFeedback');
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const submitText = submitBtn.querySelector('.submit-text');
+  const spinner = submitBtn.querySelector('.spinner-border');
   
-  // Envia o formulário via AJAX
-document.getElementById('ccups-contact-form').addEventListener('submit', function(e) {
-  e.preventDefault();
+  // Mostra loading
+  submitText.textContent = 'Enviando...';
+  spinner.classList.remove('d-none');
+  submitBtn.disabled = true;
   
-  const form = e.target;
-  const feedback = document.getElementById('ccupsFormFeedback');
+  // Limpa feedback anterior
+  feedback.classList.add('d-none');
   
-  fetch('assets/php/enviar-email.php', {
+  fetch(form.action, {
     method: 'POST',
     body: new FormData(form),
     headers: {
@@ -164,11 +167,19 @@ document.getElementById('ccups-contact-form').addEventListener('submit', functio
     feedback.classList.remove('d-none', 'alert-danger', 'alert-success');
     feedback.classList.add(data.success ? 'alert-success' : 'alert-danger');
     feedback.textContent = data.message;
-    if(data.success) form.reset();
+    
+    if(data.success) {
+      form.reset();
+    }
   })
   .catch(error => {
     feedback.classList.remove('d-none', 'alert-success');
     feedback.classList.add('alert-danger');
     feedback.textContent = 'Erro na conexão. Tente novamente.';
+  })
+  .finally(() => {
+    submitText.textContent = 'Enviar Mensagem';
+    spinner.classList.add('d-none');
+    submitBtn.disabled = false;
   });
 });
