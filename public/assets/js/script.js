@@ -204,7 +204,7 @@ function initCounters() {
 
   function animateCounter(counter) {
     const target = +counter.getAttribute('data-target');
-    const duration = 2000; // 2 segundos
+    const duration = 4000; // 2 segundos
     const startTime = performance.now();
     const hasPlus = counter.textContent.includes('+');
 
@@ -230,4 +230,49 @@ function initCounters() {
 document.addEventListener("DOMContentLoaded", function() {
   // Seu código existente...
   initCounters(); // ← Adicione esta linha no final do DOMContentLoaded
+});
+
+
+
+//Limpar o formulario depois que enviar o email
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById('ccups-contact-form');
+    const feedback = document.getElementById('ccupsFormFeedback');
+    const btn = form.querySelector('button[type="submit"]');
+    const spinner = btn.querySelector('.spinner-border');
+    const submitText = btn.querySelector('.submit-text');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Mostra o spinner
+        submitText.classList.add('d-none');
+        spinner.classList.remove('d-none');
+
+        // Envia via AJAX
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form)
+        })
+        .then(response => response.text())
+        .then(data => {
+            if (data.trim() === "success") {
+                feedback.className = "alert alert-success mt-3";
+                feedback.textContent = "Mensagem enviada com sucesso!";
+                form.reset(); // limpa o formulário
+            } else {
+                feedback.className = "alert alert-danger mt-3";
+                feedback.textContent = "Erro ao enviar a mensagem. Tente novamente.";
+            }
+        })
+        .catch(err => {
+            feedback.className = "alert alert-danger mt-3";
+            feedback.textContent = "Falha na conexão. Verifique sua internet.";
+        })
+        .finally(() => {
+            spinner.classList.add('d-none');
+            submitText.classList.remove('d-none');
+        });
+    });
 });

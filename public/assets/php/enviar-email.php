@@ -1,53 +1,34 @@
 <?php
-header('Content-Type: application/json');
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = htmlspecialchars($_POST['nome']);
+    $telefone = htmlspecialchars($_POST['telefone']);
+    $email = htmlspecialchars($_POST['email']);
+    $assunto = htmlspecialchars($_POST['assunto']);
+    $descricao = htmlspecialchars($_POST['descricao']);
 
-// Dados do formulário
-$dados = [
-    'nome' => filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING),
-    'telefone' => filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING),
-    'email' => filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL),
-    'assunto' => filter_input(INPUT_POST, 'assunto', FILTER_SANITIZE_STRING),
-    'descricao' => filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_STRING)
-];
+    // Email de destino
+    $para = "ccups.cosmedefarias@gmail.com ";  // <-- ALTERAR PARA O EMAIL DA ONG OU SEU GMAIL
 
-// Validação
-foreach ($dados as $campo => $valor) {
-    if (empty($valor)) {
-        echo json_encode(['success' => false, 'message' => "Preencha o campo $campo"]);
-        exit;
+    // Corpo do email
+    $mensagem = "
+        <h2>Mensagem do Formulário</h2>
+        <p><strong>Nome:</strong> {$nome}</p>
+        <p><strong>Telefone:</strong> {$telefone}</p>
+        <p><strong>Email:</strong> {$email}</p>
+        <p><strong>Mensagem:</strong><br>{$descricao}</p>
+    ";
+
+    // Cabeçalhos
+    $headers  = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= "From: {$nome} <{$email}>" . "\r\n";
+
+    // Envia
+    if (mail($para, $assunto, $mensagem, $headers)) {
+        echo "success";
+    } else {
+        echo "error";
     }
+} else {
+    echo "Método inválido";
 }
-
-// Configuração do email
-$para = 'ccups.cosmedefarias@gmail.com';
-$assunto = $dados['assunto'];
-
-// Corpo do email em HTML
-$corpo = "
-    <h2>Nova mensagem do site CCUPS</h2>
-    <p><strong>Nome:</strong> {$dados['nome']}</p>
-    <p><strong>Telefone:</strong> {$dados['telefone']}</p>
-    <p><strong>Email:</strong> {$dados['email']}</p>
-    <p><strong>Mensagem:</strong></p>
-    <p>{$dados['descricao']}</p>
-    <p><small>Enviado em: " . date('d/m/Y H:i') . "</small></p>
-";
-
-// Cabeçalhos
-$headers = [
-    'MIME-Version: 1.0',
-    'Content-type: text/html; charset=utf-8',
-    'From: ' . $dados['nome'] . ' <' . $dados['email'] . '>',
-    'Reply-To: ' . $dados['email'],
-    'X-Mailer: PHP/' . phpversion()
-];
-
-// Envio do email
-$enviado = mail($para, $assunto, $corpo, implode("\r\n", $headers));
-
-// Resposta JSON
-echo json_encode([
-    'success' => $enviado,
-    'message' => $enviado ? 'Mensagem enviada com sucesso!' : 'Erro ao enviar mensagem'
-]);
-?>
