@@ -183,3 +183,51 @@ document.getElementById('ccups-contact-form').addEventListener('submit', functio
     submitBtn.disabled = false;
   });
 });
+
+// Contador - quando chegar na parte do numeros
+function initCounters() {
+  const counters = document.querySelectorAll('.counter');
+  if (!counters.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => {
+    observer.observe(counter);
+  });
+
+  function animateCounter(counter) {
+    const target = +counter.getAttribute('data-target');
+    const duration = 2000; // 2 segundos
+    const startTime = performance.now();
+    const hasPlus = counter.textContent.includes('+');
+
+    function update(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const value = Math.floor(progress * target);
+      
+      counter.textContent = hasPlus ? `${value}+` : value;
+      
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        counter.textContent = hasPlus ? `${target}+` : target;
+      }
+    }
+
+    requestAnimationFrame(update);
+  }
+}
+
+// Inicia quando o DOM estiver pronto
+document.addEventListener("DOMContentLoaded", function() {
+  // Seu código existente...
+  initCounters(); // ← Adicione esta linha no final do DOMContentLoaded
+});
