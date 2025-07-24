@@ -1319,15 +1319,15 @@
           </div>
           <div class="modal-body text-center">
 
-            <!-- QR Code Dinâmico -->
+            <!-- QR Code -->
             <div id="pixQrContainer" class="d-flex justify-content-center mb-3"></div>
             <p class="small text-muted mb-4">Aponte a câmera do app do seu banco para o QR Code.</p>
-            <img src="assets/img/wifi-qr.png" class="img-fluid" alt="">
+            <img src="assets/img/qrcode.jpg" class="img-fluid" alt="">
 
             <!-- Chave PIX Copiável -->
             <div class="pix-key-wrapper mb-4">
               <div class="input-group">
-                <input type="text" id="pixKeyInput" class="form-control form-control-sm" value="chavepix@ccups.ong.br"
+                <input type="text" id="pixKeyInput" class="form-control form-control-sm" value="41888416000175"
                   readonly>
                 <button class="btn btn-outline-success btn-sm" type="button" id="copyPixBtn"
                   aria-label="Copiar chave Pix">
@@ -1341,18 +1341,18 @@
             <div class="bank-info text-start mx-auto mb-3">
               <h6 class="text-success fw-bold mb-2">Dados Bancários (Transferência / TED / DOC)</h6>
               <ul class="list-unstyled small mb-0">
-                <li><strong>Instituição:</strong> NUBANK</li>
-                <li><strong>Agência:</strong>000-1 </li>
-                <li><strong>Conta:</strong>618837871 </li>
-                <li><strong>CPF:</strong> 816593855-04</li>
-                <li><strong>Favorecido:</strong> Everaldo</li>
+                <li><strong>Instituição:</strong> Caixa Econômica Federal</li>
+                <li><strong>Agência:</strong> 3790 </li>
+                <li><strong>Conta:</strong> 577515592-7</li>
+                <li><strong>CNPJ:</strong> 41.888.416/0001-75</li>
+                <li><strong>Favorecido:</strong> CCUPS</li>
               </ul>
             </div>
 
             <hr class="my-4">
 
             <p class="small text-muted mb-0">
-              Enviou a doação? Envie o comprovante para <strong>contato@ccups.ong.br</strong> para emitirmos recibo.
+              Enviou a doação? Envie o comprovante para <strong>ccups.cosmedefarias@gmail.com</strong> para emitirmos recibo.
             </p>
           </div>
         </div>
@@ -1404,7 +1404,7 @@
                 Envie sua mensagem
               </div>
               <div class="card-body">
-                <form id="ccups-contact-form" action="assets/php/enviar-email.php" method="POST">
+                <form id="ccups-contact-form" action="assets/php/send-email.php" method="POST">
                   <div class="row g-3">
                     <!-- Nome -->
                     <div class="col-12">
