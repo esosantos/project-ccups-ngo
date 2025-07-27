@@ -883,53 +883,41 @@ header {
   margin: 8px;
   /* pequeno espaço para não colar nas bordas */
 }
-/* Validação do formulário */
-.was-validated .form-control:invalid,
-.was-validated .form-control:invalid:focus,
-.form-control.is-invalid,
-.form-control.is-invalid:focus {
-    border-color: #dc3545;
-    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
-}
-
-.was-validated .form-control:valid,
-.was-validated .form-control:valid:focus,
-.form-control.is-valid,
-.form-control.is-valid:focus {
-    border-color: #198754;
-    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
-}
-
-/* Feedback do formulário */
-#msgStatus {
-    transition: all 0.3s ease;
+/*ALERTA DO EMAIL*/
+/* Estilos para os alertas */
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 
 .alert-success {
-    background-color: #d1e7dd;
-    color: #0f5132;
-    border-color: #badbcc;
+    background: #4CAF50;
+    color: white;
 }
 
-.alert-danger {
-    background-color: #f8d7da;
-    color: #842029;
-    border-color: #f5c2c7;
+.alert-error {
+    background: #f44336;
+    color: white;
 }
 
-/* Spinner */
-.spinner-border {
-    vertical-align: middle;
-    width: 1rem;
-    height: 1rem;
-    border-width: 0.15em;
+.alert-icon {
+    font-weight: bold;
+    font-size: 18px;
 }
 
-/* Formatação do telefone */
-input[type="tel"] {
-    font-family: monospace;
+.fade-out {
+    opacity: 0;
 }
-
 
 /* ============================================= */
 /* ESTADO HOVER (OPCIONAL) */
