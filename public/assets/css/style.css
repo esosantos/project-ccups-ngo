@@ -930,9 +930,6 @@ input[type="tel"] {
     font-family: monospace;
 }
 
-/*Formulario*/
-/* ============================================= */
-
 
 /* ============================================= */
 /* ESTADO HOVER (OPCIONAL) */
@@ -982,7 +979,6 @@ input[type="tel"] {
 }
 
 
-
 /* -------- Responsividade -------- */
 @media (max-width: 768px) {
   #doe-agora .donation-list .list-group-item {
@@ -1011,7 +1007,6 @@ input[type="tel"] {
     font-size: 1rem;
   }
 }
-
 
 
 /* ================================
@@ -1053,18 +1048,45 @@ footer .border-top {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Estilos para o aviso de cookies */
-#cookieNotice {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  display: block !important;
-  /* Força a exibição */
+/* Aviso de Cookies - Mobile First */
+.cookie-notice {
+  transform: translateY(100%);
+  transition: transform 0.3s ease-out;
 }
 
-#cookieNotice.show {
-  opacity: 1;
+.cookie-notice.show {
+  transform: translateY(0);
 }
 
+@media (max-width: 767.98px) {
+  .cookie-notice {
+    padding: 1rem !important;
+  }
+  
+  .cookie-notice small {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+  
+  #aceitarCookies {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Modal de Privacidade para mobile */
+@media (max-width: 575.98px) {
+  #privacidadeModal .modal-dialog {
+    margin: 0;
+    max-width: 100%;
+    height: 100%;
+  }
+  
+  #privacidadeModal .modal-content {
+    height: 100%;
+    border-radius: 0;
+  }
+}
 /* =============================
    RESPONSIVO
    ============================= */

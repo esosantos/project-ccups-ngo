@@ -43,15 +43,15 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'eso.santos81@gmail.com';
-    $mail->Password   = 'vhjjjpukqgzofviz';
+    $mail->Username   = 'ccups.cosmedefarias@gmail.com';
+    $mail->Password   = 'jquowofgtyaxepbt';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port       = 465;
     $mail->CharSet    = 'UTF-8';
 
     // Remetente e destinatário
-    $mail->setFrom('eso.santos81@gmail.com', 'Contato ONG');
-    $mail->addAddress('eso.santos81@gmail.com');
+    $mail->setFrom('ccups.cosmedefarias@gmail.com', 'EMAIL DO FORMULARIO DO SITE');
+    $mail->addAddress('ccups.cosmedefarias@gmail.com');
     $mail->addReplyTo($_POST['email'], $_POST['name']);
 
     // Conteúdo do email
