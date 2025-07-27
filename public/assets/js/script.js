@@ -137,52 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-//Validação do Formulario
-document.getElementById('ccups-contact-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  const form = e.target;
-  const feedback = document.getElementById('ccupsFormFeedback');
-  const submitBtn = form.querySelector('button[type="submit"]');
-  const submitText = submitBtn.querySelector('.submit-text');
-  const spinner = submitBtn.querySelector('.spinner-border');
-  
-  // Mostra loading
-  submitText.textContent = 'Enviando...';
-  spinner.classList.remove('d-none');
-  submitBtn.disabled = true;
-  
-  // Limpa feedback anterior
-  feedback.classList.add('d-none');
-  
-  fetch(form.action, {
-    method: 'POST',
-    body: new FormData(form),
-    headers: {
-      'Accept': 'application/json'
-    }
-  })
-  .then(response => response.json())
-  .then(data => {
-    feedback.classList.remove('d-none', 'alert-danger', 'alert-success');
-    feedback.classList.add(data.success ? 'alert-success' : 'alert-danger');
-    feedback.textContent = data.message;
-    
-    if(data.success) {
-      form.reset();
-    }
-  })
-  .catch(error => {
-    feedback.classList.remove('d-none', 'alert-success');
-    feedback.classList.add('alert-danger');
-    feedback.textContent = 'Erro na conexão. Tente novamente.';
-  })
-  .finally(() => {
-    submitText.textContent = 'Enviar Mensagem';
-    spinner.classList.add('d-none');
-    submitBtn.disabled = false;
-  });
-});
 
 // Contador - quando chegar na parte do numeros
 function initCounters() {
@@ -233,46 +187,16 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
-//Limpar o formulario depois que enviar o email
-
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById('ccups-contact-form');
-    const feedback = document.getElementById('ccupsFormFeedback');
-    const btn = form.querySelector('button[type="submit"]');
-    const spinner = btn.querySelector('.spinner-border');
-    const submitText = btn.querySelector('.submit-text');
+  const aviso = document.getElementById("cookieNotice");
+  const botao = document.getElementById("aceitarCookies");
 
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
+  if (localStorage.getItem("cookies_aceitos") === "true") {
+    aviso.classList.add("d-none");
+  }
 
-        // Mostra o spinner
-        submitText.classList.add('d-none');
-        spinner.classList.remove('d-none');
-
-        // Envia via AJAX
-        fetch(form.action, {
-            method: 'POST',
-            body: new FormData(form)
-        })
-        .then(response => response.text())
-        .then(data => {
-            if (data.trim() === "success") {
-                feedback.className = "alert alert-success mt-3";
-                feedback.textContent = "Mensagem enviada com sucesso!";
-                form.reset(); // limpa o formulário
-            } else {
-                feedback.className = "alert alert-danger mt-3";
-                feedback.textContent = "Erro ao enviar a mensagem. Tente novamente.";
-            }
-        })
-        .catch(err => {
-            feedback.className = "alert alert-danger mt-3";
-            feedback.textContent = "Falha na conexão. Verifique sua internet.";
-        })
-        .finally(() => {
-            spinner.classList.add('d-none');
-            submitText.classList.remove('d-none');
-        });
-    });
+  botao.addEventListener("click", () => {
+    localStorage.setItem("cookies_aceitos", "true");
+    aviso.classList.add("d-none");
+  });
 });

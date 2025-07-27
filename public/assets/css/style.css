@@ -665,6 +665,7 @@ header {
     display: none;
   }
 }
+
 /* =========================================
   SECTION SERVICES
   =========================================*/
@@ -675,7 +676,7 @@ header {
 }
 
 
-  
+
 /* ================================
    Section TEAM - 
    ================================ */
@@ -882,79 +883,56 @@ header {
   margin: 8px;
   /* pequeno espaço para não colar nas bordas */
 }
+/* Validação do formulário */
+.was-validated .form-control:invalid,
+.was-validated .form-control:invalid:focus,
+.form-control.is-invalid,
+.form-control.is-invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+.was-validated .form-control:valid,
+.was-validated .form-control:valid:focus,
+.form-control.is-valid,
+.form-control.is-valid:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+
+/* Feedback do formulário */
+#msgStatus {
+    transition: all 0.3s ease;
+}
+
+.alert-success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border-color: #badbcc;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #842029;
+    border-color: #f5c2c7;
+}
+
+/* Spinner */
+.spinner-border {
+    vertical-align: middle;
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.15em;
+}
+
+/* Formatação do telefone */
+input[type="tel"] {
+    font-family: monospace;
+}
 
 /*Formulario*/
 /* ============================================= */
-/* ESTILOS BASE PARA CAMPOS DO FORMULÁRIO */
-/* ============================================= */
-.form-control {
-  /* Layout */
-  display: block;
-  width: 100%;
-  padding: 0.375rem 0.75rem;
 
-  /* Tipografia */
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--verde-escuro-ccups);
-
-  /* Aparência */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: var(--cor-branca);
-  background-clip: padding-box;
-  border: 1px solid var(--verde-escuro-ccups);
-  border-radius: var(--bs-border-radius);
-
-  /* Espaçamento */
-  margin-bottom: 1rem;
-
-  /* Transição suave */
-  transition: border-color 0.2s ease;
-}
-
-/* ============================================= */
-/* REMOÇÃO TOTAL DO FOCO PADRÃO */
-/* ============================================= */
-.form-control:focus,
-.form-control:active,
-.form-control:focus-visible {
-  outline: none !important;
-  box-shadow: none !important;
-  border-color: var(--verde-escuro-ccups) !important;
-}
-
-/* ============================================= */
-/* ESTADOS DOS CAMPOS */
-/* ============================================= */
-/* Campo inválido */
-.form-control:required:not(:placeholder-shown):invalid {
-  border-color: #dc3545;
-}
-
-/* Campo preenchido */
-.form-control:not(:placeholder-shown) {
-  border-color: var(--verde-ccups);
-}
-
-/* Placeholder */
-.form-control::placeholder {
-  color: #6c757d;
-  opacity: 0.7;
-  font-size: 0.9rem;
-}
-
-/* ============================================= */
-/* LABELS */
-/* ============================================= */
-.form-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  color: var(--verde-escuro-ccups);
-}
 
 /* ============================================= */
 /* ESTADO HOVER (OPCIONAL) */
@@ -1075,6 +1053,17 @@ footer .border-top {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* Estilos para o aviso de cookies */
+#cookieNotice {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: block !important;
+  /* Força a exibição */
+}
+
+#cookieNotice.show {
+  opacity: 1;
+}
 
 /* =============================
    RESPONSIVO
