@@ -149,8 +149,18 @@ body {
   /* previne vazamento */
 }
 
-body.modal-open {
-  padding-right: 0 !important;
+body.modal-open .modal-backdrop.show {
+  opacity: 0.15;
+  /* valor suave – ajuste se quiser mais ou menos escuro */
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Reduz a opacidade do fundo escuro do MENU (offcanvas) */
+.offcanvas-backdrop.show {
+  opacity: 0.1;
+  /* quase transparente */
+  background-color: rgba(0, 0, 0, 0.05);
+  /* toque bem leve */
 }
 
 /* --- Para Firefox (mais limitado) --- */
@@ -241,6 +251,9 @@ main {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+.modal-backdrop.show {
+  opacity: 0.1;
+}
 
 /*Configuração do Botão de fechar menu responsivo*/
 .nav-toggler {
@@ -390,7 +403,7 @@ header {
   height: clamp(400px, 40vw, 1000px);
   background: url('../img/fundo.png') no-repeat center;
   background-size: contain;
-  opacity: 0.15;
+  opacity: 0.30;
   z-index: 0;
 }
 
@@ -709,10 +722,15 @@ header {
 
 .member-photo {
   width: 100%;
+  max-width: 240px;
+  /* limite ideal para telas pequenas */
   height: 220px;
   object-fit: cover;
   border-radius: 12px;
+  margin: 0 auto;
+  display: block;
 }
+
 
 .carousel-btn {
   position: absolute;
@@ -798,7 +816,7 @@ header {
 }
 
 .modal-donate .pix-qr-wrapper {
-  max-width: 260px;
+  max-width: 220px;
   margin: 0 auto;
 }
 
@@ -1207,5 +1225,12 @@ footer .border-top {
 @media (max-width: 767.98px) {
   .logo-header {
     display: none;
+  }
+  .text-justify-sm {
+    text-align: justify !important;
+  }
+ 
+  #services p{
+    text-align: justify !important;
   }
 }
