@@ -82,7 +82,7 @@ function startAutoplay() {
   autoplay = setInterval(() => {
     index++;
     moveCarousel();
-  }, 3000);
+  }, 5000);
 }
 
 function stopAutoplay() {
@@ -158,7 +158,7 @@ function initCounters() {
 
   function animateCounter(counter) {
     const target = +counter.getAttribute('data-target');
-    const duration = 4000; // 2 segundos
+    const duration = 4000; // 4 segundos
     const startTime = performance.now();
     const hasPlus = counter.textContent.includes('+');
 
