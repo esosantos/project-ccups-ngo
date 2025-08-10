@@ -374,14 +374,12 @@ header {
 
 
 /* ================================
-   Section HOME 
+   Section HOME */
 
-   */
 #home {
   position: relative;
   min-height: 100vh;
   padding-top: calc(5rem + 70px);
-  /* espaço para header fixo */
   padding-bottom: 5rem;
   display: flex;
   align-items: center;
@@ -389,10 +387,10 @@ header {
   text-align: center;
   color: var(--cor-branca);
   overflow: hidden;
-  /* impede conteúdo fora da section */
+  background-color: #002200; /* fundo verde escuro */
 }
 
-/* Imagem centralizada como pseudo-elemento */
+/* Fundo fixo e nítido */
 #home::after {
   content: '';
   position: absolute;
@@ -403,23 +401,45 @@ header {
   height: clamp(400px, 40vw, 1000px);
   background: url('../img/fundo.png') no-repeat center;
   background-size: contain;
-  opacity: 0.30;
+  opacity: 0.35;
   z-index: 0;
+  pointer-events: none;
+  filter: none;
 }
 
-/* Overlay */
+/* Imagem transparente animada no lugar dos círculos */
 #home::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.1);
-  z-index: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: url('../img/') no-repeat center;
+  background-size: 100%; /* ajuste conforme sua imagem */
+  animation: floatOverlay 60s ease-in-out infinite alternate;
+  mix-blend-mode: screen; /* mantém brilho suave */
+  opacity: 0.15; /* ajuste a transparência pra suavizar */
 }
 
+/* Animação suave e orgânica da imagem */
+@keyframes floatOverlay {
+  0% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 52% 53%;
+  }
+  100% {
+    background-position: 50% 50%;
+  }
+}
+
+/* Conteúdo acima de tudo */
 #home .container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
+
 
 /* Títulos e subtítulos */
 .title-ccups {
