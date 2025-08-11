@@ -7,7 +7,7 @@ document.getElementById("formContact").addEventListener("submit", function(e) {
     status.classList.remove("d-none");
 
     // Envia os dados (MESMO código que já funcionava)
-    fetch("assets/php/send.php", {
+    fetch("/php/send.php", {
         method: "POST",
         body: new FormData(this)
     })
