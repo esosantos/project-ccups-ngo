@@ -387,10 +387,10 @@ header {
   text-align: center;
   color: var(--cor-branca);
   overflow: hidden;
-  background-color: #002200; /* fundo verde escuro */
+  background-color: #002200; /* verde escuro */
 }
 
-/* Fundo fixo e nítido */
+/* Fundo fixo e centralizado (sua foto, sem mexer aqui) */
 #home::after {
   content: '';
   position: absolute;
@@ -407,34 +407,40 @@ header {
   filter: none;
 }
 
-/* Imagem transparente animada no lugar dos círculos */
+/* Efeito suave apenas nas laterais, sem tocar o centro */
 #home::before {
   content: '';
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: url('../img/') no-repeat center;
-  background-size: 100%; /* ajuste conforme sua imagem */
-  animation: floatOverlay 60s ease-in-out infinite alternate;
-  mix-blend-mode: screen; /* mantém brilho suave */
-  opacity: 0.15; /* ajuste a transparência pra suavizar */
+
+  background:
+    radial-gradient(circle at 10% 50%, rgba(255 255 255 / 0.12), transparent 60%),
+    radial-gradient(circle at 90% 50%, rgba(255 255 255 / 0.12), transparent 60%);
+  
+  background-repeat: no-repeat;
+  background-size: 20% 100%;
+  background-position: left center, right center;
+
+  animation: lateralGlow 30s ease-in-out infinite alternate;
+  mix-blend-mode: screen;
+  opacity: 0.3;
 }
 
-/* Animação suave e orgânica da imagem */
-@keyframes floatOverlay {
+@keyframes lateralGlow {
   0% {
-    background-position: 50% 50%;
+    background-position: 5% 50%, 95% 50%;
   }
   50% {
-    background-position: 52% 53%;
+    background-position: 10% 45%, 90% 55%;
   }
   100% {
-    background-position: 50% 50%;
+    background-position: 5% 50%, 95% 50%;
   }
 }
 
-/* Conteúdo acima de tudo */
+/* Conteúdo do home acima do efeito */
 #home .container {
   position: relative;
   z-index: 2;
@@ -1041,11 +1047,6 @@ header {
    Footer Estilizado - CCUPS
    ================================ */
 
-.hover-primary:hover {
-  color: var(--azul-ccups) !important;
-  transition: color 0.3s ease;
-}
-
 .logo-footer {
   max-width: 100px;
   /* Ajuste para o tamanho desejado */
@@ -1057,20 +1058,45 @@ header {
 .bg-verde {
   background: linear-gradient(to right, #006400, #2e8b57);
 }
-
-footer i {
-  color: var(--cor-branca);
-  min-width: 20px;
-}
-
 footer a {
   color: var(--cor-branca);
+  position: relative;
+  display: inline-block;
+  padding-left: 0;
+  text-decoration: none;
+  transition: padding-left 0.5s ease; /* transição mais suave */
+  box-shadow: none !important;
+  text-shadow: none !important;
+  cursor: pointer;
 }
 
+/* Setinha antes do texto */
+footer a::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.5s ease, left 0.5s ease; /* transição mais suave */
+  color: var(--cor-branca);
+  font-weight: 700;
+  font-size: 1em;
+  pointer-events: none;
+}
+
+/* No hover: aumenta padding para abrir espaço e desloca a seta */
 footer a:hover {
-  color: var(--azul-ccups) !important;
-
+  padding-left: 28px; /* mais espaço pro texto e seta */
 }
+
+/* Setinha aparece e fica mais afastada da borda */
+footer a:hover::before {
+  opacity: 1;
+  left: 10px; /* espaçamento maior da borda */
+}
+
+
 
 footer .border-top {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -1246,11 +1272,12 @@ footer .border-top {
   .logo-header {
     display: none;
   }
+
   .text-justify-sm {
     text-align: justify !important;
   }
- 
-  #services p{
+
+  #services p {
     text-align: justify !important;
   }
 }
