@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->Username   = 'ccups.cosmedefarias@gmail.com';
         $mail->Password   = 'jquowofgtyaxepbt';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mail->Port       = 465;
+        $mail->Port       = 26;//Porta Alternativa liberada pela Hostgator
 
         $mail->setFrom('ccups.cosmedefarias@gmail.com', 'Contato ONG');
         $mail->addAddress('ccups.cosmedefarias@gmail.com');
